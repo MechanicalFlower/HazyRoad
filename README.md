@@ -25,6 +25,14 @@ You're on your way home and come to a crossroads where a barrier is blocking you
 - `Space` to jump.
 - `ESC` to open and close settings menu.
 
+### Screenshots
+
+<div align="center">
+
+<img src="public/publishing/screenshots/screenshot1.png" width="30%"> <img src="public/publishing/screenshots/screenshot2.png" width="30%"> <img src="public/publishing/screenshots/screenshot3.png" width="30%"> <img src="public/publishing/screenshots/screenshot4.png" width="30%">
+
+</div>
+
 ## Contributing
 
 ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)
