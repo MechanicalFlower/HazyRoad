@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://4iw36jh300a2"]
+
+[ext_resource type="Shader" path="res://shaders/psx_postprocessing.gdshader" id="1_265xg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cuvnm"]
+shader = ExtResource("1_265xg")
+shader_parameter/enabled = true
+shader_parameter/dithering = true
+shader_parameter/colors = 12
+shader_parameter/dither_size = 2
+
+[node name="PSXPostProcessing" type="CanvasLayer"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_cuvnm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4

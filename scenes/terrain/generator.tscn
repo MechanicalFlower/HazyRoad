@@ -1,0 +1,243 @@
+[gd_scene load_steps=7 format=3 uid="uid://cty82s7wjct6f"]
+
+[ext_resource type="PackedScene" uid="uid://cjfj82lkhugl1" path="res://scenes/item/mechanism/grid.tscn" id="1_qatj3"]
+[ext_resource type="PackedScene" uid="uid://cxdasewpcpnsb" path="res://scenes/item/receptacle/fuse_box.tscn" id="2_hq4aj"]
+[ext_resource type="Script" path="res://scripts/editor/runtime_remove.gd" id="2_ypqhd"]
+[ext_resource type="PackedScene" uid="uid://ctkc7yqdqdtao" path="res://scenes/geometry/floor.tscn" id="3_1vmja"]
+[ext_resource type="PackedScene" uid="uid://c562aiw47jvnk" path="res://scenes/terrain/wall.tscn" id="6_grap0"]
+[ext_resource type="PackedScene" uid="uid://csi0appw0lt1t" path="res://scenes/terrain/cube.tscn" id="6_uu1ga"]
+
+[node name="Generator" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("3_1vmja")]
+transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7, 0, 0, 0)
+visible = false
+script = ExtResource("2_ypqhd")
+
+[node name="Mechanisms" type="Node3D" parent="."]
+
+[node name="GridYellow" parent="Mechanisms" instance=ExtResource("1_qatj3")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 5.34573, 0, -0.496935)
+required_num_fuse = 2
+receptacle = "fuse_box_yellow"
+identifier = "grid_yellow"
+
+[node name="GridRed" parent="Mechanisms" instance=ExtResource("1_qatj3")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 5.34573, 0, 11.218)
+color = 2
+receptacle = "fuse_box_red"
+identifier = "grid_red"
+
+[node name="GridBlue" parent="Mechanisms" instance=ExtResource("1_qatj3")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 5.34573, 0, -12.7305)
+color = 1
+receptacle = "fuse_box_blue"
+identifier = "grid_blue"
+
+[node name="Receptacles" type="Node3D" parent="."]
+
+[node name="FuseBoxYellow1" parent="Receptacles" instance=ExtResource("2_hq4aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9, 2, -0.801707)
+identifier = "fuse_box_yellow"
+
+[node name="FuseBoxYellow2" parent="Receptacles" instance=ExtResource("2_hq4aj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9, 2, 0.198293)
+identifier = "fuse_box_yellow"
+
+[node name="FuseBoxBlue" parent="Receptacles" instance=ExtResource("2_hq4aj")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 15.6837, 2, -15.881)
+color = 1
+identifier = "fuse_box_blue"
+
+[node name="FuseBoxRed" parent="Receptacles" instance=ExtResource("2_hq4aj")]
+transform = Transform3D(8.74228e-08, 0, -1, 0, 1, 0, 1, 0, 8.74228e-08, -1.61826, 2, 13.8988)
+color = 2
+identifier = "fuse_box_red"
+
+[node name="FuseBoxGreen" parent="Receptacles" instance=ExtResource("2_hq4aj")]
+transform = Transform3D(2.62269e-07, 0, -1, 0, 1, 0, 1, 0, 2.62269e-07, -16.4603, 2, 7.90306)
+color = 3
+identifier = "fuse_box_green"
+
+[node name="FuseBoxGreen2" parent="Receptacles" instance=ExtResource("2_hq4aj")]
+transform = Transform3D(2.62269e-07, 0, -1, 0, 1, 0, 1, 0, 2.62269e-07, -15.4603, 2, 7.90306)
+color = 3
+identifier = "fuse_box_green"
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="Plane029" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, -16)
+
+[node name="Plane030" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, -16)
+
+[node name="Plane031" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10, 0, -16)
+
+[node name="Plane064" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 20, 0, -16)
+
+[node name="Plane032" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, 0, -16)
+
+[node name="Plane033" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14, 0, -16)
+
+[node name="Plane034" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2, 0, 14)
+
+[node name="Plane035" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4, 0, 14)
+
+[node name="Plane036" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10, 0, 14)
+
+[node name="Plane037" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, 0, 14)
+
+[node name="Plane038" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 14, 0, 14)
+
+[node name="Plane065" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 20, 0, 14)
+
+[node name="Plane039" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 23, 0, -1)
+
+[node name="Plane044" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -13, 0, 11)
+
+[node name="Plane045" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -13, 0, -13)
+
+[node name="Plane066" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -16, 0, -10)
+
+[node name="Plane067" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -16, 0, 8)
+
+[node name="Plane058" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, 2.5)
+
+[node name="Plane059" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 0, 2.5)
+
+[node name="Plane060" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 0, 2.5)
+
+[node name="Plane061" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, 8.5)
+
+[node name="Plane062" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 0, 8.5)
+
+[node name="Plane063" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 0, 8.5)
+
+[node name="Plane049" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -5, 0, 5.5)
+
+[node name="Plane070" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -5, 0, -6.5)
+
+[node name="Plane050" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 13, 0, 5.5)
+
+[node name="Plane069" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -9.5)
+
+[node name="Plane071" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 0, -9.5)
+
+[node name="Plane072" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 0, -9.5)
+
+[node name="Plane073" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2, 0, -3.5)
+
+[node name="Plane074" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4, 0, -3.5)
+
+[node name="Plane075" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 0, -3.5)
+
+[node name="Plane053" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 13, 0, -6.5)
+
+[node name="Plane040" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 23, 0, 5)
+
+[node name="Plane041" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 23, 0, 11)
+
+[node name="Plane042" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 23, 0, -7)
+
+[node name="Plane043" parent="Walls" instance=ExtResource("6_grap0")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 23, 0, -13)
+
+[node name="Columns" type="Node3D" parent="."]
+
+[node name="Cube003" parent="Columns" instance=ExtResource("6_uu1ga")]
+skeleton = NodePath("../..")
+
+[node name="Cube005" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13, 0, -10)
+skeleton = NodePath("../..")
+
+[node name="Cube006" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13, 0, -16)
+skeleton = NodePath("../..")
+
+[node name="Cube007" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23, 0, -16)
+skeleton = NodePath("../..")
+
+[node name="Cube008" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23, 0, 14)
+skeleton = NodePath("../..")
+
+[node name="Cube009" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, 7.5)
+skeleton = NodePath("../..")
+
+[node name="Cube010" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, 2.5)
+skeleton = NodePath("../..")
+
+[node name="Cube011" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 0, 2.5)
+skeleton = NodePath("../..")
+
+[node name="Cube015" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 0, -9.5)
+skeleton = NodePath("../..")
+
+[node name="Cube016" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 0, -3.5)
+skeleton = NodePath("../..")
+
+[node name="Cube017" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, -3.5)
+skeleton = NodePath("../..")
+
+[node name="Cube018" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, -9.5)
+skeleton = NodePath("../..")
+
+[node name="Cube012" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 0, 8.5)
+skeleton = NodePath("../..")
+
+[node name="Cube013" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13, 0, 8)
+skeleton = NodePath("../..")
+
+[node name="Cube014" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13, 0, 14)
+skeleton = NodePath("../..")
+
+[node name="Cube004" parent="Columns" instance=ExtResource("6_uu1ga")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19, 0, 8)
+skeleton = NodePath("../..")

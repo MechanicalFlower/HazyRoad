@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://bni6852m8mwkm"]
+
+[ext_resource type="Script" path="res://scripts/item/generic/accessory.gd" id="1_vojys"]
+[ext_resource type="Texture2D" uid="uid://2t38vrxwiv4l" path="res://addons/goat/images/item_interaction_icon.png" id="2_fhmig"]
+[ext_resource type="PackedScene" uid="uid://bos5kdxse876b" path="res://scenes/item/accessory/mesh/flashlight.tscn" id="3_h16hr"]
+[ext_resource type="AudioStream" uid="uid://bmf3m5mc4g67s" path="res://assets/sfx/pickup.wav" id="4_siw06"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cwnx8"]
+size = Vector3(0.2, 0.2, 0.5)
+
+[node name="Flashlight" type="StaticBody3D"]
+script = ExtResource("1_vojys")
+identifier = "flashlight"
+icon = ExtResource("2_fhmig")
+
+[node name="FlashlightMesh" parent="." instance=ExtResource("3_h16hr")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_cwnx8")
+
+[node name="PickupSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_siw06")
+bus = &"SFX"

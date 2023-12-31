@@ -1,0 +1,330 @@
+[gd_scene load_steps=19 format=3 uid="uid://dwxlghgl6ri0h"]
+
+[ext_resource type="PackedScene" uid="uid://bdpyegthsnhsm" path="res://assets/models/security_post/security_post.gltf" id="1_bvdsa"]
+[ext_resource type="Script" path="res://scripts/item/door_security_post.gd" id="5_c0i5m"]
+[ext_resource type="Material" uid="uid://cmci8nkb2ih7p" path="res://assets/models/house/models/house2.material" id="6_a0bto"]
+[ext_resource type="PackedScene" uid="uid://dsj1aka62ltwu" path="res://scenes/item/accessory/crowbar.tscn" id="7_ntglk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42hrq"]
+albedo_color = Color(0.27451, 0.27451, 0.27451, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onh3e"]
+resource_name = "material_0"
+transparency = 2
+alpha_scissor_threshold = 0.05
+alpha_antialiasing_mode = 0
+blend_mode = 1
+cull_mode = 2
+vertex_color_use_as_albedo = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhjp3"]
+albedo_color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48yvp"]
+albedo_color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcikd"]
+albedo_color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcflh"]
+albedo_color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lare"]
+albedo_color = Color(0.533333, 0.533333, 0.533333, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mu65w"]
+size = Vector3(0.01, 0.6, 0.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bslu2"]
+size = Vector3(0.5, 0.6, 0.01)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_esae8"]
+size = Vector3(0.01, 0.6, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_850pj"]
+resource_name = "house2"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+metallic = 1.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tdgyx"]
+_surfaces = [{
+"aabb": AABB(-1.62921e-07, 0, -1, 0.1, 2.15, 1.00001),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 3, 0, 5, 0, 4, 0, 2, 0, 3, 0, 0, 0, 5, 0, 6, 0, 0, 0, 3, 0, 5, 0, 5, 0, 7, 0, 4, 0, 5, 0, 6, 0, 7, 0, 1, 0, 4, 0, 7, 0, 1, 0, 2, 0, 4, 0, 7, 0, 0, 0, 1, 0, 7, 0, 6, 0, 0, 0),
+"name": "house2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 153, 153, 9, 64, 0, 0, 0, 128, 76, 239, 46, 180, 153, 153, 9, 64, 0, 0, 128, 191, 76, 239, 46, 180, 0, 0, 0, 0, 0, 0, 128, 191, 183, 204, 204, 61, 153, 153, 9, 64, 0, 0, 128, 191, 183, 204, 204, 61, 0, 0, 0, 0, 0, 0, 128, 191, 205, 204, 204, 61, 0, 0, 0, 0, 163, 242, 139, 178, 205, 204, 204, 61, 153, 153, 9, 64, 163, 242, 139, 178)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0gh5d"]
+resource_name = "house2_house2_door2"
+_surfaces = [{
+"aabb": AABB(-1.62921e-07, 0, -1, 0.1, 2.15, 1.00001),
+"attribute_data": PackedByteArray(38, 141, 70, 63, 0, 80, 226, 58, 47, 55, 61, 63, 241, 120, 89, 63, 82, 149, 50, 63, 0, 80, 226, 58, 167, 3, 61, 63, 96, 68, 83, 62, 82, 149, 50, 63, 0, 172, 27, 61, 195, 64, 12, 63, 4, 31, 86, 62, 38, 141, 70, 63, 0, 172, 27, 61, 16, 229, 12, 63, 139, 187, 88, 63, 248, 61, 41, 63, 160, 237, 145, 60, 102, 143, 58, 63, 79, 225, 23, 63, 48, 13, 25, 63, 128, 237, 145, 60, 102, 143, 58, 63, 142, 164, 230, 62, 48, 13, 25, 63, 96, 6, 170, 60, 26, 220, 56, 63, 142, 164, 230, 62, 248, 61, 41, 63, 128, 6, 170, 60, 26, 220, 56, 63, 79, 225, 23, 63, 190, 244, 32, 63, 128, 71, 160, 59, 36, 179, 59, 63, 56, 207, 229, 62, 190, 244, 32, 63, 0, 144, 255, 58, 214, 94, 57, 63, 56, 207, 229, 62, 140, 124, 40, 63, 0, 146, 255, 58, 214, 94, 57, 63, 100, 80, 28, 63, 140, 124, 40, 63, 0, 72, 160, 59, 36, 179, 59, 63, 100, 80, 28, 63, 11, 104, 49, 63, 0, 37, 206, 60, 16, 229, 12, 63, 139, 187, 88, 63, 56, 112, 29, 63, 0, 37, 206, 60, 195, 64, 12, 63, 4, 31, 86, 62, 56, 112, 29, 63, 0, 172, 123, 61, 167, 3, 61, 63, 96, 68, 83, 62, 11, 104, 49, 63, 0, 172, 123, 61, 47, 55, 61, 63, 241, 120, 89, 63, 196, 197, 48, 63, 128, 6, 170, 60, 214, 94, 57, 63, 100, 80, 28, 63, 196, 197, 48, 63, 160, 237, 145, 60, 36, 179, 59, 63, 100, 80, 28, 63, 248, 61, 41, 63, 160, 237, 145, 60, 36, 179, 59, 63, 56, 207, 229, 62, 248, 61, 41, 63, 128, 6, 170, 60, 214, 94, 57, 63, 56, 207, 229, 62, 166, 119, 32, 63, 64, 82, 30, 60, 26, 220, 56, 63, 79, 225, 23, 63, 166, 119, 32, 63, 0, 132, 78, 60, 102, 143, 58, 63, 79, 225, 23, 63, 110, 168, 48, 63, 0, 132, 78, 60, 102, 143, 58, 63, 142, 164, 230, 62, 110, 168, 48, 63, 64, 82, 30, 60, 24, 220, 56, 63, 142, 164, 230, 62),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 2, 0, 1, 0, 0, 0, 3, 0, 2, 0, 4, 0, 6, 0, 5, 0, 4, 0, 7, 0, 6, 0, 8, 0, 10, 0, 9, 0, 8, 0, 11, 0, 10, 0, 12, 0, 14, 0, 13, 0, 12, 0, 15, 0, 14, 0, 16, 0, 18, 0, 17, 0, 16, 0, 19, 0, 18, 0, 20, 0, 22, 0, 21, 0, 20, 0, 23, 0, 22, 0),
+"material": SubResource("StandardMaterial3D_850pj"),
+"name": "house2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 153, 153, 9, 64, 0, 0, 0, 128, 76, 239, 46, 180, 153, 153, 9, 64, 0, 0, 128, 191, 76, 239, 46, 180, 0, 0, 0, 0, 0, 0, 128, 191, 183, 204, 204, 61, 153, 153, 9, 64, 0, 0, 128, 191, 183, 204, 204, 61, 0, 0, 0, 0, 0, 0, 128, 191, 76, 239, 46, 180, 0, 0, 0, 0, 0, 0, 128, 191, 76, 239, 46, 180, 153, 153, 9, 64, 0, 0, 128, 191, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 205, 204, 204, 61, 0, 0, 0, 0, 163, 242, 139, 178, 183, 204, 204, 61, 0, 0, 0, 0, 0, 0, 128, 191, 76, 239, 46, 180, 0, 0, 0, 0, 0, 0, 128, 191, 183, 204, 204, 61, 0, 0, 0, 0, 0, 0, 128, 191, 183, 204, 204, 61, 153, 153, 9, 64, 0, 0, 128, 191, 205, 204, 204, 61, 153, 153, 9, 64, 163, 242, 139, 178, 205, 204, 204, 61, 0, 0, 0, 0, 163, 242, 139, 178, 0, 0, 0, 0, 153, 153, 9, 64, 0, 0, 0, 128, 205, 204, 204, 61, 153, 153, 9, 64, 163, 242, 139, 178, 183, 204, 204, 61, 153, 153, 9, 64, 0, 0, 128, 191, 76, 239, 46, 180, 153, 153, 9, 64, 0, 0, 128, 191, 205, 204, 204, 61, 153, 153, 9, 64, 163, 242, 139, 178, 0, 0, 0, 0, 153, 153, 9, 64, 0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 205, 204, 204, 61, 0, 0, 0, 0, 163, 242, 139, 178, 0, 0, 255, 127, 255, 127, 0, 128, 0, 0, 255, 127, 255, 127, 0, 128, 0, 0, 255, 127, 255, 127, 0, 128, 0, 0, 255, 127, 255, 127, 0, 128, 255, 255, 255, 255, 255, 127, 254, 255, 255, 255, 255, 255, 255, 127, 254, 255, 255, 255, 255, 255, 255, 127, 254, 255, 255, 255, 255, 255, 255, 127, 254, 255, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 255, 255, 255, 0, 0, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128, 255, 255, 255, 127, 255, 127, 0, 128, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128, 255, 127, 255, 127, 255, 127, 0, 128)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_tdgyx")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_w3abb"]
+data = PackedVector3Array(0, 0, 0, 0, 2.15, -1, 0, 2.15, 0, 0, 0, 0, 0, 0, -1, 0, 2.15, -1, 0.1, 2.15, -1, 0, 0, -1, 0.1, 0, -1, 0.1, 2.15, -1, 0, 2.15, -1, 0, 0, -1, 0, 0, 0, 0.1, 0, -1, 0.1, 0, 0, 0, 0, 0, 0, 0, -1, 0.1, 0, -1, 0.1, 0, -1, 0.1, 2.15, 0, 0.1, 2.15, -1, 0.1, 0, -1, 0.1, 0, 0, 0.1, 2.15, 0, 0, 2.15, 0, 0.1, 2.15, -1, 0.1, 2.15, 0, 0, 2.15, 0, 0, 2.15, -1, 0.1, 2.15, -1, 0.1, 2.15, 0, 0, 0, 0, 0, 2.15, 0, 0.1, 2.15, 0, 0.1, 0, 0, 0, 0, 0)
+
+[node name="SecurityPost" type="Node3D"]
+transform = Transform3D(-6, 0, 9.53674e-07, 0, 6, 0, -9.53674e-07, 0, -6, 0, 0, 0)
+metadata/_edit_group_ = true
+
+[node name="security_post" parent="." instance=ExtResource("1_bvdsa")]
+
+[node name="roof" parent="security_post/Node2" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_42hrq")
+
+[node name="window" parent="security_post/Node2/wall1" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/1 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/2 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/3 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/4 = SubResource("StandardMaterial3D_onh3e")
+
+[node name="wall-part1" parent="security_post/Node2/wall1" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part2" parent="security_post/Node2/wall1" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part3" parent="security_post/Node2/wall1" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part4" parent="security_post/Node2/wall1" index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="window2" parent="security_post/Node2/wall2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/1 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/2 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/3 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/4 = SubResource("StandardMaterial3D_onh3e")
+
+[node name="wall-part12" parent="security_post/Node2/wall2" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part22" parent="security_post/Node2/wall2" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part32" parent="security_post/Node2/wall2" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part42" parent="security_post/Node2/wall2" index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="window3" parent="security_post/Node2/wall3" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/1 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/2 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/3 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/4 = SubResource("StandardMaterial3D_onh3e")
+
+[node name="wall-part23" parent="security_post/Node2/wall3" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part33" parent="security_post/Node2/wall3" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part43" parent="security_post/Node2/wall3" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part5" parent="security_post/Node2/wall3" index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="window4" parent="security_post/Node2/wall3" index="5"]
+surface_material_override/0 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/1 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/2 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/3 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/4 = SubResource("StandardMaterial3D_onh3e")
+
+[node name="wall-part44" parent="security_post/Node2/wall3" index="6"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part45" parent="security_post/Node2/wall3" index="7"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="window5" parent="security_post/Node2/wall4" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/1 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/2 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/3 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/4 = SubResource("StandardMaterial3D_onh3e")
+
+[node name="window6" parent="security_post/Node2/wall4" index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/1 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/2 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/3 = SubResource("StandardMaterial3D_onh3e")
+surface_material_override/4 = SubResource("StandardMaterial3D_onh3e")
+
+[node name="wall-part34" parent="security_post/Node2/wall4" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part46" parent="security_post/Node2/wall4" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part52" parent="security_post/Node2/wall4" index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part53" parent="security_post/Node2/wall4" index="5"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part54" parent="security_post/Node2/wall4" index="6"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part6" parent="security_post/Node2/wall4" index="7"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="wall-part47" parent="security_post/Node2/wall4" index="8"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fhjp3")
+surface_material_override/1 = SubResource("StandardMaterial3D_48yvp")
+surface_material_override/2 = SubResource("StandardMaterial3D_hcikd")
+surface_material_override/3 = SubResource("StandardMaterial3D_pcflh")
+surface_material_override/4 = SubResource("StandardMaterial3D_8lare")
+
+[node name="BaseCollision" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BaseCollision"]
+transform = Transform3D(1, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 1, 0.24, 0.3, -2.98023e-08)
+shape = SubResource("BoxShape3D_mu65w")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="BaseCollision"]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0.3, -0.38)
+shape = SubResource("BoxShape3D_bslu2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="BaseCollision"]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0.3, 0.38)
+shape = SubResource("BoxShape3D_bslu2")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="BaseCollision"]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -0.25, 0.3, 0.25)
+shape = SubResource("BoxShape3D_esae8")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="BaseCollision"]
+transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, -0.25, 0.3, -0.25)
+shape = SubResource("BoxShape3D_esae8")
+
+[node name="DoorSecurityPost" type="StaticBody3D" parent="."]
+transform = Transform3D(0.208333, 0, 2.98023e-08, 0, 0.208333, 0, -2.98023e-08, 0, 0.208333, -0.250396, 0.0520833, 0.127854)
+script = ExtResource("5_c0i5m")
+receptacle = "fuse_box_green"
+translation_keys = Array[String](["DOOR_SECURITY_POST"])
+identifier = "door_security_post"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DoorSecurityPost"]
+transform = Transform3D(1, 0, 0, 0, 1.12, 0, 0, 0, 1.2, 0, -0.25, 0)
+material_override = ExtResource("6_a0bto")
+gi_mode = 0
+mesh = SubResource("ArrayMesh_0gh5d")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DoorSecurityPost"]
+shape = SubResource("ConcavePolygonShape3D_w3abb")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="DoorSecurityPost"]
+transform = Transform3D(0.800001, -1.77636e-15, -5.29396e-23, 0, -3.49692e-08, 0.800001, -1.77636e-15, -0.800001, -3.49692e-08, -0.188512, 2.29578, -0.546326)
+light_color = Color(0.356863, 0.619608, 0.254902, 1)
+
+[node name="Crowbar" parent="." instance=ExtResource("7_ntglk")]
+transform = Transform3D(-0.166667, -2.98023e-08, 7.77156e-16, 0, -7.28523e-09, -0.166667, 2.6077e-08, -0.166667, 7.28524e-09, 0.0242089, 0.0583333, 0.0596762)
+
+[editable path="security_post"]

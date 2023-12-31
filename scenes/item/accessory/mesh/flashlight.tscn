@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://bos5kdxse876b"]
+
+[ext_resource type="ArrayMesh" uid="uid://dsm3662dydg27" path="res://assets/models/flashlight/flashlight.obj" id="1_wjr20"]
+
+[node name="FlashlightMesh" type="Node3D"]
+transform = Transform3D(0.2, 0, 0, 0, -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.02, 0, 0, 0, -8.74227e-10, 0.02, 0, -0.02, -8.74227e-10, 0.45, 1.2, 0.06)
+mesh = ExtResource("1_wjr20")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 0, 0)
+light_color = Color(1, 0.964706, 0.533333, 1)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+spot_range = 50.0
+spot_angle = 16.6861

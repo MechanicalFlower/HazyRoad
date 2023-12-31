@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct5dnixhs0aul"]
+
+[ext_resource type="Script" path="res://scripts/item/door_security_post.gd" id="1_pwchm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lmsuw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gkx1f"]
+size = Vector3(0.25, 3, 1.5)
+
+[node name="DoorSecurityPost" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.75)
+script = ExtResource("1_pwchm")
+receptacle = "fuse_box_green"
+translation_keys = Array[String](["DOOR_SECURITY_POST"])
+identifier = "door_security_post"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 3, 0, 0, 0, 1.5, 0, 1.5, 0)
+mesh = SubResource("BoxMesh_lmsuw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_gkx1f")

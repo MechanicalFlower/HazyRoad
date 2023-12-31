@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxdasewpcpnsb"]
+
+[ext_resource type="Script" path="res://scripts/item/fuse_box.gd" id="1_d50cw"]
+[ext_resource type="Texture2D" uid="uid://2t38vrxwiv4l" path="res://addons/goat/images/item_interaction_icon.png" id="2_dkrrj"]
+[ext_resource type="PackedScene" uid="uid://bpkf65udulp0c" path="res://assets/models/lamp_post_bench_trashcan/control_box.tscn" id="3_bhemg"]
+[ext_resource type="PackedScene" uid="uid://b580a8bk8iux5" path="res://scenes/item/accessory/mesh/fuse.tscn" id="3_vdeug"]
+[ext_resource type="AudioStream" uid="uid://bmf3m5mc4g67s" path="res://assets/sfx/pickup.wav" id="5_qeg80"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pu6aj"]
+size = Vector3(0.25, 0.5, 0.5)
+
+[node name="FuseBox" type="StaticBody3D"]
+script = ExtResource("1_d50cw")
+item_to_interact = "fuse"
+translation_keys = Array[String](["FUSE_BOX"])
+identifier = "fuse_box"
+icon = ExtResource("2_dkrrj")
+
+[node name="ControlBox_1" parent="." instance=ExtResource("3_bhemg")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.1, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_pu6aj")
+
+[node name="FuseMesh" parent="." instance=ExtResource("3_vdeug")]
+visible = false
+
+[node name="PickupSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qeg80")
+bus = &"SFX"

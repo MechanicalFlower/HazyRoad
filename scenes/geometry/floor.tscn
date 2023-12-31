@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctkc7yqdqdtao"]
+
+[ext_resource type="Texture2D" uid="uid://cybnrb23wxipf" path="res://assets/textures/grass.png" id="1_1tr1x"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_srxwf"]
+size = Vector3(40, 0.5, 40)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53x8u"]
+albedo_texture = ExtResource("1_1tr1x")
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wmcjf"]
+data = PackedVector3Array(-20, 0.25, 20, 20, 0.25, 20, -20, -0.25, 20, 20, 0.25, 20, 20, -0.25, 20, -20, -0.25, 20, 20, 0.25, -20, -20, 0.25, -20, 20, -0.25, -20, -20, 0.25, -20, -20, -0.25, -20, 20, -0.25, -20, 20, 0.25, 20, 20, 0.25, -20, 20, -0.25, 20, 20, 0.25, -20, 20, -0.25, -20, 20, -0.25, 20, -20, 0.25, -20, -20, 0.25, 20, -20, -0.25, -20, -20, 0.25, 20, -20, -0.25, 20, -20, -0.25, -20, 20, 0.25, 20, -20, 0.25, 20, 20, 0.25, -20, -20, 0.25, 20, -20, 0.25, -20, 20, 0.25, -20, -20, -0.25, 20, 20, -0.25, 20, -20, -0.25, -20, 20, -0.25, 20, 20, -0.25, -20, -20, -0.25, -20)
+
+[node name="Floor" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_srxwf")
+surface_material_override/0 = SubResource("StandardMaterial3D_53x8u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["grass"]]
+collision_layer = 5
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_wmcjf")

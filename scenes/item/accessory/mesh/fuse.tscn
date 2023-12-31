@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b580a8bk8iux5"]
+
+[ext_resource type="PackedScene" uid="uid://dadmgj0lvhnk3" path="res://assets/models/lamp_post_bench_trashcan/long_fuse.tscn" id="1_m2ca0"]
+
+[node name="FuseMesh" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.08, 0, 0)
+
+[node name="LongFuse_1" parent="." instance=ExtResource("1_m2ca0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0288064, 0, 0.0404034)
+
+[node name="LongFuse_2" parent="." instance=ExtResource("1_m2ca0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0288065, 0, 0.0404034)

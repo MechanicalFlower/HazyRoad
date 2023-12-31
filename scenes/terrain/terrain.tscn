@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3qlgwara8px0"]
+
+[ext_resource type="PackedScene" uid="uid://ctkc7yqdqdtao" path="res://scenes/geometry/floor.tscn" id="1_a0ry5"]
+[ext_resource type="PackedScene" uid="uid://i40jk4vpb0an" path="res://scenes/terrain/forest.tscn" id="1_au86n"]
+[ext_resource type="PackedScene" uid="uid://c2es2c3t0mh3y" path="res://scenes/terrain/garden.tscn" id="2_372qj"]
+[ext_resource type="PackedScene" uid="uid://cty82s7wjct6f" path="res://scenes/terrain/generator.tscn" id="3_hedhr"]
+
+[node name="Terrain" type="Node3D"]
+
+[node name="Forest" parent="." instance=ExtResource("1_au86n")]
+
+[node name="Garden" parent="." instance=ExtResource("2_372qj")]
+transform = Transform3D(0.973543, 0, 0.228504, 0, 1, 0, -0.228504, 0, 0.973543, -28.2757, 0, -61.4834)
+
+[node name="Generator" parent="." instance=ExtResource("3_hedhr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.9129, 0, -9.50553)
+
+[node name="Floor" parent="." instance=ExtResource("1_a0ry5")]
+transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7, 0, 0, 0)

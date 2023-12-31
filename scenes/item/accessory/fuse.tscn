@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7ukuqukreiqt"]
+
+[ext_resource type="Script" path="res://scripts/item/generic/accessory.gd" id="1_vwjkv"]
+[ext_resource type="Texture2D" uid="uid://2t38vrxwiv4l" path="res://addons/goat/images/item_interaction_icon.png" id="2_p8fln"]
+[ext_resource type="PackedScene" uid="uid://b580a8bk8iux5" path="res://scenes/item/accessory/mesh/fuse.tscn" id="3_yhtat"]
+[ext_resource type="AudioStream" uid="uid://bmf3m5mc4g67s" path="res://assets/sfx/pickup.wav" id="4_x2llw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pi2kd"]
+size = Vector3(0.1, 0.4, 0.1)
+
+[node name="Fuse" type="StaticBody3D"]
+script = ExtResource("1_vwjkv")
+identifier = "fuse"
+icon = ExtResource("2_p8fln")
+
+[node name="FuseMesh" parent="." instance=ExtResource("3_yhtat")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_pi2kd")
+
+[node name="PickupSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_x2llw")
+bus = &"SFX"

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8gqapqv7so6g"]
+
+[ext_resource type="Script" path="res://scripts/item/dark_road.gd" id="1_fohk2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jrpxd"]
+size = Vector3(2, 2, 2)
+
+[node name="DarkRoad" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_fohk2")
+translation_keys = Array[String](["DARK_ROAD"])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_jrpxd")

@@ -1,0 +1,29 @@
+[gd_resource type="Environment" load_steps=5 format=3 uid="uid://dtgnbg8pmfbjy"]
+
+[ext_resource type="Shader" path="res://addons/gpsx/example/materials/shaders/misc/gpsx_sky.gdshader" id="1_g6wkn"]
+[ext_resource type="Texture2D" uid="uid://dxmmrih8af3qb" path="res://assets/textures/nightsky.hdr" id="2_6xap7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mvojt"]
+shader = ExtResource("1_g6wkn")
+shader_parameter/mixer = Color(0.290196, 0.282353, 1, 1)
+shader_parameter/tex = ExtResource("2_6xap7")
+shader_parameter/dithering = true
+shader_parameter/banding = true
+
+[sub_resource type="Sky" id="Sky_85p4l"]
+sky_material = SubResource("ShaderMaterial_mvojt")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_85p4l")
+ambient_light_source = 3
+ambient_light_color = Color(0.388235, 0, 0.392157, 1)
+ambient_light_energy = 16.0
+tonemap_mode = 2
+glow_intensity = 2.0
+glow_bloom = 1.0
+fog_enabled = true
+fog_light_color = Color(0.0117647, 0, 0.239216, 1)
+fog_light_energy = 0.5
+volumetric_fog_emission = Color(0.0352941, 0.0352941, 0.0352941, 1)
+volumetric_fog_sky_affect = 0.3

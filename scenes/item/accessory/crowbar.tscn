@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsj1aka62ltwu"]
+
+[ext_resource type="Script" path="res://scripts/item/generic/accessory.gd" id="1_k56cj"]
+[ext_resource type="Texture2D" uid="uid://2t38vrxwiv4l" path="res://addons/goat/images/item_interaction_icon.png" id="2_v07w6"]
+[ext_resource type="PackedScene" uid="uid://c4k6dgybts0a2" path="res://scenes/item/accessory/mesh/crowbar.tscn" id="3_kds01"]
+[ext_resource type="AudioStream" uid="uid://bmf3m5mc4g67s" path="res://assets/sfx/pickup.wav" id="4_7kcnf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hm50p"]
+size = Vector3(0.315907, 2.14904, 0.2)
+
+[node name="Crowbar" type="StaticBody3D"]
+script = ExtResource("1_k56cj")
+identifier = "crowbar"
+icon = ExtResource("2_v07w6")
+
+[node name="CrowbarMesh" parent="." instance=ExtResource("3_kds01")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0647166, 0, 0)
+shape = SubResource("BoxShape3D_hm50p")
+
+[node name="PickupSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7kcnf")
+bus = &"SFX"

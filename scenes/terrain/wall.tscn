@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c562aiw47jvnk"]
+
+[ext_resource type="Material" uid="uid://b37vueiav2gg8" path="res://assets/models/unfinished_buildings/unfinished_atlas.material" id="1_kto3c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pakgy"]
+size = Vector3(3, 3, 0.1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tejm5"]
+
+[node name="Wall" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_pakgy")
+
+[node name="WallMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, -1.5, 0, 1.5, -6.55671e-08, 0, 1.5, 0)
+mesh = SubResource("PlaneMesh_tejm5")
+surface_material_override/0 = ExtResource("1_kto3c")

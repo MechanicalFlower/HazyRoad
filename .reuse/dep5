@@ -1,0 +1,170 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: HazyRoad
+Upstream-Contact: Florian Vazelle <florian.vazelle@vivaldi.net>
+Source: https://github.com/MechanicalFlower/HazyRoad
+
+Files: *
+Copyright: 2023 Florian Vazelle
+License: MIT
+
+# Addons
+
+Files: addons/gd-plug/*
+Copyright: 2021 Tan Jian Ping
+License: MIT
+Source: https://github.com/imjp94/gd-plug
+
+Files: addons/proton_scatter/*
+Copyright: 2020-present HungryProton
+License: MIT
+Source: https://github.com/HungryProton/scatter
+
+Files: addons/debug_menu/*
+Copyright: 2023-present Hugo Locurcio and contributors
+License: MIT
+Source: https://github.com/godot-extended-libraries/godot-debug-menu
+
+Files: addons/gpsx/*
+Copyright: 2021 Uneven Prankster
+License: MIT
+Source: https://github.com/GithubPrankster/gpsx
+
+Files: addons/goat/*
+Copyright: 2019-2020 Miskatonic Studio
+License: MIT
+Source: https://github.com/miskatonicstudio/goat
+
+Files: addons/dialogue_label/*
+Copyright: 2023 night-glider
+License: MIT
+Source: https://github.com/night-glider/Dialogue-Label
+
+Files: addons/UniversalFade/*
+Copyright: 2019 Tomek
+License: MIT
+Source: https://github.com/KoBeWi/Godot-Universal-Fade
+
+Files: addons/EasyMenus/*
+Copyright: 2022 Savo Vuksan
+License: MIT
+Source: https://github.com/SavoVuksan/EasyMenus
+
+# Models
+
+Files: assets/models/car/*
+Copyright: 2021-2022 GGBotNet
+License: CC0-1.0
+Source: https://ggbot.itch.io/psx-style-cars
+
+Files: assets/models/crowbar/*
+Copyright: 2009 Clint Bellanger
+License: CC0-1.0
+Source: https://opengameart.org/content/crowbar
+
+Files: assets/models/flashligh/*
+Copyright: 2009 jpsweber
+License: CC0-1.0
+Source: https://opengameart.org/content/torch
+
+Files: assets/models/hedge/*
+Copyright: 2021-2022 Elegant Crow
+License: CC0-1.0
+Source: https://elegantcrow.itch.io/retro-modular-hedge-maze
+
+Files: assets/models/house/*
+Copyright: 2021-2022 Elegant Crow
+License: CC0-1.0
+Source: https://elegantcrow.itch.io/retro-house-pack
+
+Files: assets/models/lamp_post_bench_trashcan/*
+Copyright: 2022 loafbrr
+License: CC0-1.0
+Source: https://opengameart.org/content/lamp-post-bench-trashcan
+
+Files: assets/models/unfinished_buildings/*
+Copyright: 2022 loafbrr
+License: CC0-1.0
+Source: https://opengameart.org/content/unfinished-buildings
+
+Files: assets/models/foliage/*
+Copyright: 2022 loafbrr
+License: CC0-1.0
+Source: https://opengameart.org/content/foliage1
+
+# Textures
+
+Files: assets/textures/ground.jpg
+Copyright: 2017-2023 Lennart Demes
+License: CC0-1.0
+Source: https://ambientcg.com/view?id=Ground037
+
+Files: assets/textures/paving_stones.jpg
+Copyright: 2017-2023 Lennart Demes
+License: CC0-1.0
+Source: https://ambientcg.com/view?id=PavingStones131
+
+Files: assets/textures/grass.jpg
+Copyright: 2017-2023 Lennart Demes
+License: CC0-1.0
+Source: https://ambientcg.com/view?id=Grass001
+
+Files: assets/textures/wood.jpg
+Copyright: 2014 rubberduck
+License: CC0-1.0
+Source: https://opengameart.org/node/27564
+
+Files: assets/textures/metal.jpg
+Copyright: 2014 rubberduck
+License: CC0-1.0
+Source: https://opengameart.org/node/27532
+
+
+# Fonts
+
+Files: assets/fonts/disket-mono-typeface/*
+Copyright: 2019 Mariano Diez
+License: OFL-1.0
+Source: https://fontesk.com/disket-mono-typeface/
+
+# Music
+
+Files: assets/music/main_menu.ogg
+Copyright: 2021 Fato Shadow Music
+License: CC-BY-3.0
+Source: https://opengameart.org/content/main-menu-title
+Comment: Edited by Florian Vazelle, with audacity, to keep only the intro
+
+# SFX
+
+Files: assets/sfx/pickup.wav
+Copyright: 2009 Michel Baradari
+License: CC-BY-3.0
+Source: https://opengameart.org/content/3-item-sounds
+
+Files: assets/sfx/metal_slide.wav
+Copyright: 2009 Varkalandar
+License: CC-BY-3.0
+Source: https://opengameart.org/content/rockmetal-slide
+
+Files: assets/sfx/car.ogg
+Copyright: 2022 GGBot
+License: CC0-1.0
+Source: https://opengameart.org/content/car-sound-effects-pack-low-quality
+
+Files: assets/sfx/door_open.ogg
+Copyright: 2010 qubodup
+License: CC0-1.0
+Source: https://opengameart.org/content/door-open-door-close-set
+
+
+# Shaders
+
+Files: shaders/psx_model.gdshader
+Copyright: 2023 Grau
+License: CC0-1.0
+Source: https://godotshaders.com/shader/ps1-psx-model/
+
+Files: shaders/psx_postprocessing.gdshader
+Copyright: 2023 Grau
+License: CC0-1.0
+Source: https://godotshaders.com/shader/ps1-psx-postprocessing/

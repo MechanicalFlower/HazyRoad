@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://l2twpv4bpg3b"]
+
+[ext_resource type="Script" path="res://scripts/dialogue.gd" id="1_2hfyg"]
+[ext_resource type="FontFile" uid="uid://c5u555hyx2fp5" path="res://assets/fonts/disket-mono-typeface/disket-mono-regular.ttf" id="2_7a0of"]
+[ext_resource type="FontFile" uid="uid://d38pla7ifaci3" path="res://assets/fonts/disket-mono-typeface/disket-mono-bold.ttf" id="3_1xces"]
+[ext_resource type="Script" path="res://scripts/text_effects/sparkle.gd" id="4_3rwhp"]
+[ext_resource type="Script" path="res://addons/dialogue_label/src/DialogueLabel.gd" id="4_sktmw"]
+[ext_resource type="AudioStream" uid="uid://hbi0njwk817g" path="res://assets/sfx/click1.wav" id="5_75c0a"]
+[ext_resource type="AudioStream" uid="uid://c7sqita5b445o" path="res://assets/sfx/click2.wav" id="6_r4xth"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_nerv4"]
+script = ExtResource("4_3rwhp")
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2hfyg")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -256.0
+offset_right = -22.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 5.0
+metadata/_edit_group_ = true
+
+[node name="Background" type="ColorRect" parent="AspectRatioContainer"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DialogueLabel" type="RichTextLabel" parent="AspectRatioContainer/Background"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_7a0of")
+theme_override_fonts/bold_font = ExtResource("3_1xces")
+theme_override_fonts/mono_font = ExtResource("2_7a0of")
+bbcode_enabled = true
+text = "Hello! i am a simple RichTextLabel extension for displaying dialogues!
+
+I support custom tags:
+[spd 1.5] - change text speed to 1.5 symbols/frame
+[inst 5]  - instantly display next 5 symbols
+[snd 0]   - choose first sound bite in sound bite list
+[wait 60] - delay for 60 frames"
+scroll_active = false
+scroll_following = true
+custom_effects = [SubResource("RichTextEffect_nerv4")]
+script = ExtResource("4_sktmw")
+messages = Array[String]([])
+sound_files = Array[AudioStream]([ExtResource("5_75c0a"), ExtResource("6_r4xth")])
+text_speed = 1.0

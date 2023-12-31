@@ -1,0 +1,221 @@
+{
+	"categories": [
+		{
+			"uuid": "33d2a8e1-cea6-4280-b71a-a2aa44f6472a",
+			"title": "Task",
+			"color": "6c6c6c"
+		},
+		{
+			"uuid": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"title": "Feature",
+			"color": "50eb0a"
+		},
+		{
+			"uuid": "2d194854-175e-4983-9f36-0c21e8dea0fc",
+			"title": "Bug",
+			"color": "d31d25"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "1362622c-1ff4-486f-8259-ad74fa64fa9d",
+			"title": "Todo",
+			"tasks": [
+				"9472b337-dcb7-4b3e-91f5-6fff4665e7fa"
+			]
+		},
+		{
+			"uuid": "d6930b80-dc1d-46ce-bed6-b6ba3a6e017f",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "a9ce4e63-5701-4739-b674-78122354194d",
+			"title": "Done",
+			"tasks": [
+				"986b2acf-53ad-4a97-9dd6-8ccfb46d9640",
+				"da9f0ae4-b4c8-4ce3-9f3a-3a8ede4a4ee0",
+				"09d8ba5c-72a0-468a-88d0-1c334eace053",
+				"4fcfd14a-daa5-4bda-b77e-454c1647b41e",
+				"4b514b23-bcb8-47b8-a50a-470aa45e4587",
+				"491aee65-55df-48ee-82d3-964b7d915375",
+				"3185f0bf-f754-4282-92bf-344b2e7c7f33",
+				"2c34f4d0-9d67-46e9-9fc7-34c512987ea1",
+				"facbb006-3ce6-4d0e-a6e5-b48a1926f151",
+				"1b01cd3d-f64e-4f23-8fa6-7a17d1812204",
+				"f4bc648d-880f-45d0-85a0-132066a5e541",
+				"16de17c3-3eca-4971-8799-36529973fee9"
+			]
+		},
+		{
+			"uuid": "91232e5b-d2c8-4a7b-a4c4-54b0eb5baf6a",
+			"title": "Bonus",
+			"tasks": [
+				"c31f208d-f5e9-45f2-ae10-cc81040ffe7e",
+				"27f886c8-e74f-42ad-9eb4-8a93efada16d",
+				"83f881cd-982c-4558-a986-fc43ddc96eb7",
+				"180ddccb-975a-4e77-a621-3521e1e5db16"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "e573a302-31ce-4524-a721-a82023bdd2fb",
+			"title": "Add sounds for the Car",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": []
+		},
+		{
+			"uuid": "c31f208d-f5e9-45f2-ae10-cc81040ffe7e",
+			"title": "Automatically trigger textbox when player reach the map limit",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": []
+		},
+		{
+			"uuid": "da9f0ae4-b4c8-4ce3-9f3a-3a8ede4a4ee0",
+			"title": "Fix Stair collisions",
+			"description": "Add CollisionShape with a Cube (Garden: Gabezo, House)",
+			"category": "2d194854-175e-4983-9f36-0c21e8dea0fc",
+			"steps": []
+		},
+		{
+			"uuid": "986b2acf-53ad-4a97-9dd6-8ccfb46d9640",
+			"title": "Add collision for limit the map",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": []
+		},
+		{
+			"uuid": "f4bc648d-880f-45d0-85a0-132066a5e541",
+			"title": "Overwrite the default font",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": []
+		},
+		{
+			"uuid": "3185f0bf-f754-4282-92bf-344b2e7c7f33",
+			"title": "Add the second dialogue for the Car",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": []
+		},
+		{
+			"uuid": "4fcfd14a-daa5-4bda-b77e-454c1647b41e",
+			"title": "Add a Floor texture (road)",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": []
+		},
+		{
+			"uuid": "27f886c8-e74f-42ad-9eb4-8a93efada16d",
+			"title": "Add props to SecurityPost",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": []
+		},
+		{
+			"uuid": "09d8ba5c-72a0-468a-88d0-1c334eace053",
+			"title": "Fix SecurityPostDoor open/close",
+			"description": "",
+			"category": "2d194854-175e-4983-9f36-0c21e8dea0fc",
+			"steps": []
+		},
+		{
+			"uuid": "9472b337-dcb7-4b3e-91f5-6fff4665e7fa",
+			"title": "Fix light and textures",
+			"description": "Maybe change material or environnement for Generator and Forest Tree",
+			"category": "2d194854-175e-4983-9f36-0c21e8dea0fc",
+			"steps": []
+		},
+		{
+			"uuid": "2c34f4d0-9d67-46e9-9fc7-34c512987ea1",
+			"title": "Fix softlock if fuse is taken after the crowbar",
+			"description": "",
+			"category": "2d194854-175e-4983-9f36-0c21e8dea0fc",
+			"steps": []
+		},
+		{
+			"uuid": "180ddccb-975a-4e77-a621-3521e1e5db16",
+			"title": "Fix go back to the DarkRoad when the flashlight is lost",
+			"description": "",
+			"category": "2d194854-175e-4983-9f36-0c21e8dea0fc",
+			"steps": []
+		},
+		{
+			"uuid": "facbb006-3ce6-4d0e-a6e5-b48a1926f151",
+			"title": "Fix the eye icon when the DoorSecurityPost is open",
+			"description": "Add a dialogue line that explain how the door has opened up",
+			"category": "2d194854-175e-4983-9f36-0c21e8dea0fc",
+			"steps": []
+		},
+		{
+			"uuid": "1b01cd3d-f64e-4f23-8fa6-7a17d1812204",
+			"title": "Fix the hand icon when the Car go to the end",
+			"description": "",
+			"category": "2d194854-175e-4983-9f36-0c21e8dea0fc",
+			"steps": []
+		},
+		{
+			"uuid": "83f881cd-982c-4558-a986-fc43ddc96eb7",
+			"title": "Polish",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": [
+				{
+					"details": "Add a light on the SecurityPost",
+					"done": false
+				},
+				{
+					"details": "Add a real light to the FuseBox",
+					"done": false
+				}
+			]
+		},
+		{
+			"uuid": "16de17c3-3eca-4971-8799-36529973fee9",
+			"title": "Add basic sfx",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
+			"steps": [
+				{
+					"details": "Add sounds for the Grid move",
+					"done": true
+				},
+				{
+					"details": "Add sounds for the Car",
+					"done": true
+				}
+			]
+		},
+		{
+			"uuid": "491aee65-55df-48ee-82d3-964b7d915375",
+			"title": "Reimport meshs",
+			"description": "",
+			"category": "33d2a8e1-cea6-4280-b71a-a2aa44f6472a",
+			"steps": []
+		},
+		{
+			"uuid": "4b514b23-bcb8-47b8-a50a-470aa45e4587",
+			"title": "Remove unused assets",
+			"description": "",
+			"category": "33d2a8e1-cea6-4280-b71a-a2aa44f6472a",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"1362622c-1ff4-486f-8259-ad74fa64fa9d"
+			],
+			[
+				"d6930b80-dc1d-46ce-bed6-b6ba3a6e017f",
+				"91232e5b-d2c8-4a7b-a4c4-54b0eb5baf6a"
+			],
+			[
+				"a9ce4e63-5701-4739-b674-78122354194d"
+			]
+		]
+	}
+}

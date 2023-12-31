@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://u4te1dsys1v0"]
+
+[ext_resource type="ArrayMesh" uid="uid://b13jqm1l2xf4a" path="res://assets/models/car/car.obj" id="1_fy14n"]
+[ext_resource type="Material" uid="uid://cisfqkqr8poc2" path="res://resources/materials/psx_car.tres" id="1_x7out"]
+
+[node name="CarMesh" type="MeshInstance3D"]
+material_override = ExtResource("1_x7out")
+mesh = ExtResource("1_fy14n")

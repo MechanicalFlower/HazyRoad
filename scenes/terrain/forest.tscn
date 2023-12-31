@@ -1,0 +1,644 @@
+[gd_scene load_steps=69 format=3 uid="uid://i40jk4vpb0an"]
+
+[ext_resource type="PackedScene" uid="uid://ctkc7yqdqdtao" path="res://scenes/geometry/floor.tscn" id="1_qr744"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter.gd" id="2_ic8pw"]
+[ext_resource type="Script" path="res://scripts/editor/runtime_remove.gd" id="2_px6do"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="3_32clj"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/create_along_edge_even.gd" id="4_jbbmx"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="5_hcokw"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/project_on_geometry.gd" id="7_4ig48"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_item.gd" id="8_re77x"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="9_mjwhq"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/path_shape.gd" id="10_cceo6"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="11_gus6p"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/sphere_shape.gd" id="12_shf8o"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/offset_rotation.gd" id="15_2sx7b"]
+[ext_resource type="PackedScene" uid="uid://copnirsqcp775" path="res://scenes/item/mechanism/barrier.tscn" id="18_0vr3q"]
+[ext_resource type="Script" path="res://scripts/item/generic/observable.gd" id="18_3xiq0"]
+[ext_resource type="PackedScene" uid="uid://d4jhwus0nlpuh" path="res://scenes/item/observable/direction_panel.tscn" id="20_c31hi"]
+[ext_resource type="PackedScene" uid="uid://dwxlghgl6ri0h" path="res://scenes/terrain/security_post.tscn" id="20_x2k0k"]
+[ext_resource type="PackedScene" uid="uid://bi488ty0ccvig" path="res://scenes/item/receptacle/car.tscn" id="21_aptn4"]
+[ext_resource type="Script" path="res://scripts/item/dark_road.gd" id="22_s8u1p"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/cache/scatter_cache.gd" id="26_bjysv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mcbqh"]
+size = Vector3(1, 10, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2nqn7"]
+size = Vector3(1, 10, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pyrsw"]
+size = Vector3(1, 10, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hom70"]
+size = Vector3(1, 10, 40)
+
+[sub_resource type="Resource" id="Resource_me6m1"]
+script = ExtResource("4_jbbmx")
+spacing = 7.0
+offset = 0.0
+align_to_path = false
+align_up_axis = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_ftuaq"]
+script = ExtResource("5_hcokw")
+position = Vector3(0.15, 0.15, 0.15)
+rotation = Vector3(5, 360, 5)
+scale = Vector3(3, 3, 3)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_hcex6"]
+script = ExtResource("7_4ig48")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 5.0
+ray_offset = 5.0
+remove_points_on_miss = false
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 4
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_w4gba"]
+script = ExtResource("3_32clj")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_me6m1"), SubResource("Resource_ftuaq"), SubResource("Resource_hcex6")])
+
+[sub_resource type="Curve3D" id="Curve3D_b8mpc"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.00987, 0, 59.4299, 0, 0, 0, 0, 0, 0, 5.66608, 0, 9.42983, 0, 0, 0, 0, 0, 0, 7.96218, 0, 1.85582, 0, 0, 0, 0, 0, 0, 13.7995, 2.38419e-07, 0.491485, 0, 0, 0, 0, 0, 0, 72.3273, 0, -2.86941),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Resource" id="Resource_x4cua"]
+script = ExtResource("10_cceo6")
+closed = false
+thickness = 0.0
+curve = SubResource("Curve3D_b8mpc")
+
+[sub_resource type="Curve3D" id="Curve3D_oinsj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -20.7019, 0, 55.5972, 0, 0, 0, 0, 0, 0, -6.40411, 0, 5.2553, 0, 0, 0, 0, 0, 0, -25.8314, 0, -2.19901, 0, 0, 0, 0, 0, 0, -89.7733, 0, -1.91134),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="Resource" id="Resource_bjp5q"]
+script = ExtResource("10_cceo6")
+closed = false
+thickness = 0.0
+curve = SubResource("Curve3D_oinsj")
+
+[sub_resource type="Curve3D" id="Curve3D_sj8dg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.4529, 0, -54.9931, 0, 0, 0, 0, 0, 0, -17.2767, 0, -17.1804, 0, 0, 0, 0, 0, 0, -90.8531, 0, -16.9942),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Resource" id="Resource_dywym"]
+script = ExtResource("10_cceo6")
+closed = false
+thickness = 0.0
+curve = SubResource("Curve3D_sj8dg")
+
+[sub_resource type="Curve3D" id="Curve3D_rnmix"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -14.669, 0, -58.5322, 0, 0, 0, 0, 0, 0, -4.98296, 0, -22.9548, 0, 0, 0, 0, 0, 0, 6.37946, 0, -17.553, 0, 0, 0, 0, 0, 0, 73.0639, 0, -17.9255),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="Resource" id="Resource_8fsq7"]
+script = ExtResource("10_cceo6")
+closed = false
+thickness = 0.0
+curve = SubResource("Curve3D_rnmix")
+
+[sub_resource type="Resource" id="Resource_yoi2n"]
+script = ExtResource("11_gus6p")
+size = Vector3(9.86364, 1, 73.7927)
+
+[sub_resource type="Resource" id="Resource_iwlx8"]
+script = ExtResource("11_gus6p")
+size = Vector3(9.86364, 1, 165.836)
+
+[sub_resource type="Resource" id="Resource_1jofa"]
+script = ExtResource("11_gus6p")
+size = Vector3(9.86364, 1, 49.2192)
+
+[sub_resource type="Resource" id="Resource_c2o63"]
+script = ExtResource("12_shf8o")
+radius = 12.4345
+
+[sub_resource type="Resource" id="Resource_jhc54"]
+script = ExtResource("4_jbbmx")
+spacing = 10.0
+offset = 0.0
+align_to_path = false
+align_up_axis = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_mywlp"]
+script = ExtResource("7_4ig48")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 10.0
+ray_offset = 1.0
+remove_points_on_miss = true
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 1
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_n1qcg"]
+script = ExtResource("15_2sx7b")
+operation = 0
+rotation = Vector3(0, -90, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_wl25b"]
+script = ExtResource("3_32clj")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_jhc54"), SubResource("Resource_mywlp"), SubResource("Resource_n1qcg")])
+
+[sub_resource type="Curve3D" id="Curve3D_0jd6o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -7.8481, 0, -23.6809, 0, 0, 0, 0, 0, 0, -19.8454, 0, -61.9471),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_0jpx6"]
+script = ExtResource("10_cceo6")
+closed = false
+thickness = 0.0
+curve = SubResource("Curve3D_0jd6o")
+
+[sub_resource type="Resource" id="Resource_su2yl"]
+script = ExtResource("4_jbbmx")
+spacing = 10.0
+offset = 0.0
+align_to_path = false
+align_up_axis = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_3e7su"]
+script = ExtResource("7_4ig48")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 10.0
+ray_offset = 1.0
+remove_points_on_miss = true
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 1
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_lnhfr"]
+script = ExtResource("15_2sx7b")
+operation = 0
+rotation = Vector3(0, 90, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_3o3wl"]
+script = ExtResource("3_32clj")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_su2yl"), SubResource("Resource_3e7su"), SubResource("Resource_lnhfr")])
+
+[sub_resource type="Curve3D" id="Curve3D_3q6vo"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 17.8367, 0, 0.00617099, 0, 0, 0, 0, 0, 0, -2.18819, 0, 70.176),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_k2u36"]
+script = ExtResource("10_cceo6")
+closed = false
+thickness = 0.0
+curve = SubResource("Curve3D_3q6vo")
+
+[sub_resource type="Resource" id="Resource_hm05i"]
+script = ExtResource("4_jbbmx")
+spacing = 10.0
+offset = 0.0
+align_to_path = false
+align_up_axis = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_bon3m"]
+script = ExtResource("7_4ig48")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 10.0
+ray_offset = 1.0
+remove_points_on_miss = true
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 1
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_q31bv"]
+script = ExtResource("15_2sx7b")
+operation = 0
+rotation = Vector3(0, 0, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_j8523"]
+script = ExtResource("3_32clj")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_hm05i"), SubResource("Resource_bon3m"), SubResource("Resource_q31bv")])
+
+[sub_resource type="Curve3D" id="Curve3D_agsho"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -13.1924, 0, -6.82355, 0, 0, 0, 0, 0, 0, -60.293, 0, -7.30177),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_4p41w"]
+script = ExtResource("10_cceo6")
+closed = false
+thickness = 0.0
+curve = SubResource("Curve3D_agsho")
+
+[sub_resource type="Resource" id="Resource_hiu0i"]
+script = ExtResource("4_jbbmx")
+spacing = 10.0
+offset = 0.0
+align_to_path = false
+align_up_axis = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_dytc6"]
+script = ExtResource("7_4ig48")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 10.0
+ray_offset = 1.0
+remove_points_on_miss = true
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 1
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_t1qf1"]
+script = ExtResource("15_2sx7b")
+operation = 0
+rotation = Vector3(0, 180, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_vb63w"]
+script = ExtResource("3_32clj")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_hiu0i"), SubResource("Resource_dytc6"), SubResource("Resource_t1qf1")])
+
+[sub_resource type="Curve3D" id="Curve3D_gj871"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 15.8585, 0, -16.4471, 0, 0, 0, 0, 0, 0, 71.7959, 0, -18.0296),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_jr133"]
+script = ExtResource("10_cceo6")
+closed = false
+thickness = 0.0
+curve = SubResource("Curve3D_gj871")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jrpxd"]
+size = Vector3(53.5196, 9, 14)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vues5"]
+lifetime_randomness = 0.43
+emission_shape = 3
+emission_box_extents = Vector3(25, 10, 5)
+direction = Vector3(0, 1, 0)
+gravity = Vector3(0, 2, 0)
+color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnygu"]
+albedo_color = Color(0, 0, 0, 1)
+billboard_mode = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_h6d0y"]
+material = SubResource("StandardMaterial3D_pnygu")
+size = Vector2(0.1, 0.1)
+
+[node name="Forest" type="Node3D"]
+
+[node name="Floor" parent="." instance=ExtResource("1_qr744")]
+transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7, 0, 0, 0)
+script = ExtResource("2_px6do")
+
+[node name="Collision" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.969621, 0, -0.244614, 0, 1, 0, 0.244614, 0, 0.969621, 4.59685, -3.8147e-06, 23.8652)
+shape = SubResource("BoxShape3D_mcbqh")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.953801, 0, -0.300439, 0, 1, 0, 0.300439, 0, 0.953801, -13.6224, -7.62939e-06, 31.3247)
+shape = SubResource("BoxShape3D_mcbqh")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 43.5921, -3.8147e-06, -17.6467)
+shape = SubResource("BoxShape3D_2nqn7")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 40.3331, -3.8147e-06, -0.472086)
+shape = SubResource("BoxShape3D_2nqn7")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.0347425, 0, 0.999396, 0, 1, 0, -0.999396, 0, 0.0347425, -34, 0, -3.116)
+shape = SubResource("BoxShape3D_pyrsw")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(-0.087034, 0, 0.996205, 0, 1, 0, -0.996205, 0, -0.087034, -31.6255, 0, -20.4947)
+shape = SubResource("BoxShape3D_pyrsw")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -14.9695, 0, 2.14804)
+shape = SubResource("BoxShape3D_pyrsw")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.411069, 0, 0.911604, 0, 1, 0, -0.911604, 0, 0.411069, 4.95639, 0, -21.3152)
+shape = SubResource("BoxShape3D_pyrsw")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.964355, 0, 0.264614, 0, 1, 0, -0.264614, 0, 0.964355, -26.2619, -0.405712, -40.9907)
+shape = SubResource("BoxShape3D_hom70")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Collision"]
+transform = Transform3D(0.964355, 0, 0.264614, 0, 1, 0, -0.264614, 0, 0.964355, -9.60431, -0.405712, -44.0417)
+shape = SubResource("BoxShape3D_hom70")
+
+[node name="Forest" type="Node3D" parent="."]
+script = ExtResource("2_ic8pw")
+keep_static_colliders = true
+force_rebuild_on_load = false
+modifier_stack = SubResource("Resource_w4gba")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="ScatterItem" type="Node3D" parent="Forest"]
+script = ExtResource("8_re77x")
+visibility_range_end = 75.0
+visibility_range_end_margin = 5.0
+lod_merge_angle = 180.0
+lod_split_angle = 180.0
+path = "res://scenes/psx_tree.tscn"
+
+[node name="ScatterShape" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 2.13106, 0, 1.0151)
+script = ExtResource("9_mjwhq")
+shape = SubResource("Resource_x4cua")
+
+[node name="ScatterShape2" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -1.14548, 0, 0.298312)
+script = ExtResource("9_mjwhq")
+shape = SubResource("Resource_bjp5q")
+
+[node name="ScatterShape3" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, -3.84225, 0, -3.5246)
+script = ExtResource("9_mjwhq")
+shape = SubResource("Resource_dywym")
+
+[node name="ScatterShape4" type="Node3D" parent="Forest"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 1.65321, 0, -1.61314)
+script = ExtResource("9_mjwhq")
+shape = SubResource("Resource_8fsq7")
+
+[node name="Road1" type="Node3D" parent="Forest"]
+transform = Transform3D(0.966421, 0, -0.256964, 0, 1, 0, 0.256964, 0, 0.966421, -3.7686, 0, 21.9988)
+script = ExtResource("9_mjwhq")
+negative = true
+shape = SubResource("Resource_yoi2n")
+
+[node name="Road2" type="Node3D" parent="Forest"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -10)
+script = ExtResource("9_mjwhq")
+negative = true
+shape = SubResource("Resource_iwlx8")
+
+[node name="Road3" type="Node3D" parent="Forest"]
+transform = Transform3D(0.959918, 0, 0.280281, 0, 1, 0, -0.280281, 0, 0.959918, -14.3229, 0, -35.2917)
+script = ExtResource("9_mjwhq")
+negative = true
+shape = SubResource("Resource_1jofa")
+
+[node name="Hub" type="Node3D" parent="Forest"]
+transform = Transform3D(0.966421, 0, -0.256964, 0, 1, 0, 0.256964, 0, 0.966421, -8, 0.032, -10)
+script = ExtResource("9_mjwhq")
+negative = true
+shape = SubResource("Resource_c2o63")
+
+[node name="StreetLight1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.85525, 0, 2.05074)
+script = ExtResource("2_ic8pw")
+render_mode = 1
+force_rebuild_on_load = false
+modifier_stack = SubResource("Resource_wl25b")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="ScatterItem" type="Node3D" parent="StreetLight1"]
+script = ExtResource("8_re77x")
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+lod_merge_angle = 180.0
+lod_split_angle = 180.0
+path = "res://scenes/street_light.tscn"
+
+[node name="ScatterShape" type="Node3D" parent="StreetLight1"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
+script = ExtResource("9_mjwhq")
+shape = SubResource("Resource_0jpx6")
+
+[node name="StreetLight2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.85525, 0, 2.05074)
+script = ExtResource("2_ic8pw")
+render_mode = 1
+force_rebuild_on_load = false
+modifier_stack = SubResource("Resource_3o3wl")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="ScatterItem" type="Node3D" parent="StreetLight2"]
+script = ExtResource("8_re77x")
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+lod_merge_angle = 180.0
+lod_split_angle = 180.0
+path = "res://scenes/street_light.tscn"
+
+[node name="ScatterShape" type="Node3D" parent="StreetLight2"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
+script = ExtResource("9_mjwhq")
+shape = SubResource("Resource_k2u36")
+
+[node name="StreetLight3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.85525, 0, 2.05074)
+script = ExtResource("2_ic8pw")
+render_mode = 1
+modifier_stack = SubResource("Resource_j8523")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="ScatterItem" type="Node3D" parent="StreetLight3"]
+script = ExtResource("8_re77x")
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+lod_merge_angle = 180.0
+lod_split_angle = 180.0
+path = "res://scenes/street_light.tscn"
+
+[node name="ScatterShape" type="Node3D" parent="StreetLight3"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
+script = ExtResource("9_mjwhq")
+shape = SubResource("Resource_4p41w")
+
+[node name="DarkRoad" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.85525, 0, 2.05074)
+script = ExtResource("2_ic8pw")
+render_mode = 1
+force_rebuild_on_load = false
+modifier_stack = SubResource("Resource_vb63w")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="ScatterItem" type="Node3D" parent="DarkRoad"]
+script = ExtResource("8_re77x")
+visibility_range_end = 100.0
+visibility_range_end_margin = 5.0
+lod_merge_angle = 180.0
+lod_split_angle = 180.0
+path = "res://scenes/street_light_dark_road.tscn"
+
+[node name="ScatterShape" type="Node3D" parent="DarkRoad"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
+script = ExtResource("9_mjwhq")
+shape = SubResource("Resource_jr133")
+
+[node name="ScatterCache" type="Node3D" parent="."]
+script = ExtResource("26_bjysv")
+cache_file = "res://resources/caches/forest_cache.tres"
+
+[node name="Mechanisms" type="Node3D" parent="."]
+
+[node name="Barrier" parent="Mechanisms" instance=ExtResource("18_0vr3q")]
+transform = Transform3D(0.956565, 0, -0.29152, 0, 1, 0, 0.29152, 0, 0.956565, 0.387088, 0.4, 7.44929)
+
+[node name="Observables" type="Node3D" parent="."]
+
+[node name="DirectionPanel" parent="Observables" instance=ExtResource("20_c31hi")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.90759, 0.25, -9.54116)
+
+[node name="Receptacles" type="Node3D" parent="."]
+
+[node name="Car" parent="Receptacles" instance=ExtResource("21_aptn4")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -0.959472, 0.25, 12.0487)
+visible = false
+
+[node name="DarkRoad2" type="Node3D" parent="."]
+transform = Transform3D(0.83089, 0, 0, 0, 1, 0, 0, 0, 1.44337, 35.2855, 0, -9.72407)
+
+[node name="DarkRoad" type="StaticBody3D" parent="DarkRoad2"]
+script = ExtResource("22_s8u1p")
+translation_keys = Array[String](["DARK_ROAD"])
+identifier = "dark_road"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DarkRoad2/DarkRoad"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23866, 4.35679, 0)
+shape = SubResource("BoxShape3D_jrpxd")
+
+[node name="FogVolume" type="GPUParticles3D" parent="DarkRoad2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+amount = 100
+visibility_aabb = AABB(-28.5099, -4, -4, 57.0199, 8, 8)
+process_material = SubResource("ParticleProcessMaterial_vues5")
+draw_pass_1 = SubResource("QuadMesh_h6d0y")
+
+[node name="Limit" type="Node3D" parent="."]
+transform = Transform3D(0.83089, 0, 0, 0, 1, 0, 0, 0, 1.44337, 35.2855, 0, -9.72407)
+
+[node name="Limit" type="StaticBody3D" parent="Limit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.83, 0, 0)
+script = ExtResource("18_3xiq0")
+translation_keys = Array[String](["LIMIT"])
+identifier = "limit"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limit/Limit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23866, 4.35679, 0)
+shape = SubResource("BoxShape3D_jrpxd")
+
+[node name="Limit2" type="StaticBody3D" parent="Limit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.1564, 0, 38.2516)
+script = ExtResource("18_3xiq0")
+translation_keys = Array[String](["LIMIT"])
+identifier = "limit"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Limit/Limit2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23866, 4.35679, 0)
+shape = SubResource("BoxShape3D_jrpxd")
+
+[node name="SecurityPost" parent="." instance=ExtResource("20_x2k0k")]
+transform = Transform3D(-4.82963, 0, -1.2941, 0, 5, 0, 1.2941, 0, -4.82963, 9.49004, 0, -3.19209)

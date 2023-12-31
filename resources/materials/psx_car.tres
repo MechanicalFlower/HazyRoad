@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cisfqkqr8poc2"]
+
+[ext_resource type="Shader" path="res://shaders/psx_model.gdshader" id="1_kq6bn"]
+[ext_resource type="Texture2D" uid="uid://c7kbo6eb05878" path="res://assets/models/car/car.png" id="1_xqt31"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_kq6bn")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo = ExtResource("1_xqt31")

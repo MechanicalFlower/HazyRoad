@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://d4jhwus0nlpuh"]
+
+[ext_resource type="Script" path="res://scripts/item/generic/observable.gd" id="1_r5hpf"]
+[ext_resource type="Texture2D" uid="uid://t1djd6j8iomg" path="res://addons/goat/images/eye_icon.png" id="2_s5cmk"]
+[ext_resource type="Texture2D" uid="uid://47q1sg7uq37v" path="res://assets/textures/metal.jpg" id="3_nnfcw"]
+[ext_resource type="Texture2D" uid="uid://n60id3fyov36" path="res://assets/textures/wood.jpg" id="4_td5sg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xd8x"]
+albedo_texture = ExtResource("3_nnfcw")
+uv1_scale = Vector3(0.18, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_o2mo4"]
+material = SubResource("StandardMaterial3D_3xd8x")
+top_radius = 0.3
+bottom_radius = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mpnej"]
+albedo_texture = ExtResource("4_td5sg")
+uv1_scale = Vector3(12, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_natsd"]
+material = SubResource("StandardMaterial3D_mpnej")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vynfs"]
+size = Vector3(0.5, 2, 0.5)
+
+[node name="DirectionPanel" type="StaticBody3D"]
+script = ExtResource("1_r5hpf")
+translation_keys = Array[String](["DIRECTION_PANEL"])
+identifier = "direction_panel"
+icon = ExtResource("2_s5cmk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, 1, 0)
+mesh = SubResource("CylinderMesh_o2mo4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_natsd")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/MeshInstance3D"]
+transform = Transform3D(-0.322315, 0, 0.189326, 0, 1, 0, -4.73316, 0, -0.322315, 0, 0, 0)
+mesh = SubResource("BoxMesh_natsd")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_vynfs")

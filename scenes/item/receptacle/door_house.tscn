@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdhbrxiu8lpx1"]
+
+[ext_resource type="Script" path="res://scripts/item/door_house.gd" id="1_xh1bg"]
+[ext_resource type="AudioStream" uid="uid://begwrsj7bkqan" path="res://assets/sfx/door_open.ogg" id="2_homyr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kggu7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t05mf"]
+size = Vector3(0.25, 3, 1.5)
+
+[node name="DoorHouse" type="StaticBody3D"]
+script = ExtResource("1_xh1bg")
+item_to_interact = "crowbar"
+translation_keys = Array[String](["DOOR_HOUSE"])
+identifier = "door_house"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 3, 0, 0, 0, 1.5, 0, 1.5, 0.75)
+mesh = SubResource("BoxMesh_kggu7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.75)
+shape = SubResource("BoxShape3D_t05mf")
+
+[node name="DoorOpenSFX" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_homyr")
+max_db = -5.0
+bus = &"SFX"

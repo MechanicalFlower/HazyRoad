@@ -1,0 +1,271 @@
+[gd_scene load_steps=33 format=3 uid="uid://bel6wcaksdcjk"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_qiuru"]
+[ext_resource type="Environment" uid="uid://dtgnbg8pmfbjy" path="res://resources/fog_env.tres" id="2_nkke1"]
+[ext_resource type="PackedScene" uid="uid://bi488ty0ccvig" path="res://scenes/item/receptacle/car.tscn" id="4_qdrib"]
+[ext_resource type="Script" path="res://scripts/menu_anim.gd" id="5_2ega5"]
+[ext_resource type="PackedScene" uid="uid://ctkc7yqdqdtao" path="res://scenes/geometry/floor.tscn" id="6_s41wb"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter.gd" id="8_k1uyb"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/stack/modifier_stack.gd" id="9_tjaot"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/create_along_edge_even.gd" id="10_i08vh"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/randomize_transforms.gd" id="11_mxkfj"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/project_on_geometry.gd" id="13_rxk03"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_item.gd" id="14_1h27t"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/scatter_shape.gd" id="15_llp6r"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/sphere_shape.gd" id="16_1c47g"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/look_at.gd" id="17_o176y"]
+[ext_resource type="PackedScene" uid="uid://b65hjj0ndnrnb" path="res://addons/ez-sfx-and-music/scenes/MusicPlayer/music_player.tscn" id="17_tb5q3"]
+[ext_resource type="Script" path="res://addons/proton_scatter/src/cache/scatter_cache.gd" id="18_2gyad"]
+[ext_resource type="PackedScene" uid="uid://dq6tvhqcy2aps" path="res://addons/EasyMenus/Scenes/main_menu.tscn" id="18_qnpgs"]
+
+[sub_resource type="Resource" id="Resource_6mw6x"]
+script = ExtResource("10_i08vh")
+spacing = 7.0
+offset = 0.0
+align_to_path = false
+align_up_axis = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_y3m1d"]
+script = ExtResource("11_mxkfj")
+position = Vector3(0.15, 0.15, 0.15)
+rotation = Vector3(5, 360, 5)
+scale = Vector3(3, 3, 3)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_hpwbu"]
+script = ExtResource("13_rxk03")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 10.0
+ray_offset = 0.0
+remove_points_on_miss = false
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 4
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_sb831"]
+script = ExtResource("9_tjaot")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_6mw6x"), SubResource("Resource_y3m1d"), SubResource("Resource_hpwbu")])
+
+[sub_resource type="Resource" id="Resource_d0x1d"]
+script = ExtResource("16_1c47g")
+radius = 95.0
+
+[sub_resource type="Resource" id="Resource_3fwg6"]
+script = ExtResource("10_i08vh")
+spacing = 7.0
+offset = 0.0
+align_to_path = false
+align_up_axis = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_aolk0"]
+script = ExtResource("11_mxkfj")
+position = Vector3(0.15, 0.15, 0.15)
+rotation = Vector3(5, 360, 5)
+scale = Vector3(3, 3, 3)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 2
+
+[sub_resource type="Resource" id="Resource_wkgqx"]
+script = ExtResource("13_rxk03")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 10.0
+ray_offset = 0.0
+remove_points_on_miss = false
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 4
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_m72lk"]
+script = ExtResource("9_tjaot")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_3fwg6"), SubResource("Resource_aolk0"), SubResource("Resource_wkgqx")])
+
+[sub_resource type="Resource" id="Resource_cc1hy"]
+script = ExtResource("16_1c47g")
+radius = 75.0
+
+[sub_resource type="Resource" id="Resource_owwa0"]
+script = ExtResource("10_i08vh")
+spacing = 30.0
+offset = 0.0
+align_to_path = false
+align_up_axis = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_ojrer"]
+script = ExtResource("13_rxk03")
+ray_direction = Vector3(0, -1, 0)
+ray_length = 10.0
+ray_offset = 1.0
+remove_points_on_miss = true
+align_with_collision_normal = false
+max_slope = 90.0
+collision_mask = 4
+exclude_mask = 0
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_fj3tq"]
+script = ExtResource("17_o176y")
+target = Vector3(0, 0, 0)
+up = Vector3(0, 1, 0)
+enabled = true
+override_global_seed = false
+custom_seed = 0
+restrict_height = false
+reference_frame = 0
+
+[sub_resource type="Resource" id="Resource_8f1j8"]
+script = ExtResource("9_tjaot")
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_owwa0"), SubResource("Resource_ojrer"), SubResource("Resource_fj3tq")])
+
+[sub_resource type="Resource" id="Resource_ibgxc"]
+script = ExtResource("16_1c47g")
+radius = 90.0
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_qiuru")
+
+[node name="Lighting" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = ExtResource("2_nkke1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.572263, 0.516061, -0.637335, -0.151768, 0.697101, 0.700726, 0.805904, 0.497727, -0.320604, 0, 16.7255, 0)
+light_energy = 0.01
+light_bake_mode = 0
+shadow_enabled = true
+directional_shadow_mode = 0
+directional_shadow_max_distance = 250.0
+
+[node name="Animation" type="Node" parent="."]
+script = ExtResource("5_2ega5")
+radius = 85.0
+speed = 0.1
+
+[node name="Car" parent="." instance=ExtResource("4_qdrib")]
+unique_name_in_owner = true
+transform = Transform3D(-0.049935, 0, -0.998752, 0, 1, 0, 0.998752, 0, -0.049935, -0.003733, 0.25, -85)
+script = null
+
+[node name="Camera3D" type="Camera3D" parent="Car"]
+unique_name_in_owner = true
+transform = Transform3D(-1, 6.18172e-08, -6.18172e-08, 0, 0.707107, 0.707107, 8.74228e-08, 0.707107, -0.707107, 0, 5, -4)
+current = true
+far = 100.0
+
+[node name="Forest" type="Node3D" parent="."]
+
+[node name="Floor" parent="Forest" instance=ExtResource("6_s41wb")]
+transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7, 0, 0, 0)
+
+[node name="Forest" type="Node3D" parent="Forest"]
+script = ExtResource("8_k1uyb")
+force_rebuild_on_load = false
+modifier_stack = SubResource("Resource_sb831")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="ScatterItem" type="Node3D" parent="Forest/Forest"]
+script = ExtResource("14_1h27t")
+visibility_range_end = 40.0
+visibility_range_end_margin = 5.0
+lod_merge_angle = 180.0
+lod_split_angle = 180.0
+path = "res://scenes/psx_tree.tscn"
+
+[node name="ScatterShape" type="Node3D" parent="Forest/Forest"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.697479, 0, -0.418488)
+script = ExtResource("15_llp6r")
+shape = SubResource("Resource_d0x1d")
+
+[node name="Forest2" type="Node3D" parent="Forest"]
+script = ExtResource("8_k1uyb")
+force_rebuild_on_load = false
+modifier_stack = SubResource("Resource_m72lk")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="ScatterItem" type="Node3D" parent="Forest/Forest2"]
+script = ExtResource("14_1h27t")
+visibility_range_end = 40.0
+visibility_range_end_margin = 5.0
+lod_merge_angle = 180.0
+lod_split_angle = 180.0
+path = "res://scenes/psx_tree.tscn"
+
+[node name="ScatterShape2" type="Node3D" parent="Forest/Forest2"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0.697479, 0, -0.418488)
+script = ExtResource("15_llp6r")
+shape = SubResource("Resource_cc1hy")
+
+[node name="StreetLight2" type="Node3D" parent="Forest"]
+script = ExtResource("8_k1uyb")
+render_mode = 1
+force_rebuild_on_load = false
+modifier_stack = SubResource("Resource_8f1j8")
+Performance/use_chunks = true
+Performance/chunk_dimensions = Vector3(15, 15, 15)
+
+[node name="ScatterItem" type="Node3D" parent="Forest/StreetLight2"]
+script = ExtResource("14_1h27t")
+visibility_range_end = 40.0
+visibility_range_end_margin = 5.0
+lod_merge_angle = 180.0
+lod_split_angle = 180.0
+path = "res://scenes/street_light.tscn"
+
+[node name="ScatterShape" type="Node3D" parent="Forest/StreetLight2"]
+transform = Transform3D(1, 0, -2.98023e-08, 0, 1, 0, 2.98023e-08, 0, 1, 0, 0, 0)
+script = ExtResource("15_llp6r")
+shape = SubResource("Resource_ibgxc")
+
+[node name="ScatterCache" type="Node3D" parent="."]
+script = ExtResource("18_2gyad")
+cache_file = "res://resources/caches/menu_cache.tres"
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="EasyMenu" parent="HUD" instance=ExtResource("18_qnpgs")]
+unique_name_in_owner = true
+
+[node name="MusicPlayer" parent="." instance=ExtResource("17_tb5q3")]
+unique_name_in_owner = true
+music_folder = "res://assets/music"
+bus_name = "Music"
