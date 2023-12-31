@@ -9,3 +9,7 @@
 *.mp3 binary
 *.png binary
 *.hdr binary
+
+# Files tracked by git-lfs
+resources/materials/psx_tree.tres filter=lfs diff=lfs merge=lfs -text
+assets/models/lamp_post_bench_trashcan/control_box.tscn filter=lfs diff=lfs merge=lfs -text
