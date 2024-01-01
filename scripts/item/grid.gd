@@ -39,7 +39,8 @@ func toggle(receptacle_state: bool):
 		_activated_num_fuse += 1
 	else:
 		_activated_num_fuse -= 1
-
+	
+	var old_state := _state
 	_state = _is_active()
 
 	tween = get_tree().create_tween()
@@ -49,8 +50,10 @@ func toggle(receptacle_state: bool):
 		tween.tween_property(self, "global_position", initial, 1)
 	tween.set_trans(tween.TRANS_SINE)
 
-	sfx.play()
 	tween.play()
+
+	if old_state != _state:
+		sfx.play()
 
 
 func _is_active() -> bool:
