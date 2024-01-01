@@ -108,14 +108,12 @@ install-templates:
 
 # Download game plugins
 install-addons:
-    [ -f plug.gd ] && just godot --headless --script plug.gd install || true
+    [ -f plug.gd ] && just godot --script plug.gd install || true
 
 # Workaround from https://github.com/godotengine/godot/pull/68461
 # Import game resources
 import-resources:
-    just godot --headless --export-pack null /dev/null
-    # timeout 60 just godot --editor || true
-    # just godot --headless --quit --editor
+    timeout 60 just godot --export-pack null /dev/null || true
 
 # Updates the game version for export
 @bump-version:
@@ -131,7 +129,12 @@ import-resources:
 
 # Godot binary wrapper
 @godot *ARGS: makedirs install-godot install-templates
-    {{ godot_bin }} {{ ARGS }}
+    #!/usr/bin/env sh
+    if [ "{{ env("CI", "false") }}" = "true" ]; then
+        just ci-godot-x11 {{ ARGS }}
+    else
+        {{ godot_bin }} {{ ARGS }}
+    fi
 
 # Open the Godot editor
 editor:
@@ -145,19 +148,19 @@ fmt:
 # Export game on Windows
 export-windows: bump-version install-addons import-resources
     mkdir -p {{ build_dir }}/windows
-    just godot --export-release '"Windows Desktop"' --headless {{ build_dir }}/windows/{{ game_name }}.exe
+    just godot --export-release '"Windows Desktop"' {{ build_dir }}/windows/{{ game_name }}.exe
     (cd {{ build_dir }}/windows && zip {{ game_name }}-windows-v{{ game_version }}.zip -r .)
     mv {{ build_dir }}/windows/{{ game_name }}-windows-v{{ game_version }}.zip {{ dist_dir }}/{{ game_name }}-windows-v{{ game_version }}.zip
     rm -rf {{ build_dir }}/windows
 
 # Export game on MacOS
 export-mac: bump-version install-addons import-resources
-    just godot --export-release "macOS" --headless {{ dist_dir }}/{{ game_name }}-mac-v{{ game_version }}.zip
+    just godot --export-release "macOS" {{ dist_dir }}/{{ game_name }}-mac-v{{ game_version }}.zip
 
 # Export game on Linux
 export-linux: bump-version install-addons import-resources
     mkdir -p {{ build_dir }}/linux
-    just godot --export-release "Linux/X11" --headless {{ build_dir }}/linux/{{ game_name }}.x86_64
+    just godot --export-release "Linux/X11" {{ build_dir }}/linux/{{ game_name }}.x86_64
     (cd {{ build_dir }}/linux && zip {{ game_name }}-linux-v{{ game_version }}.zip -r .)
     mv {{ build_dir }}/linux/{{ game_name }}-linux-v{{ game_version }}.zip {{ dist_dir }}/{{ game_name }}-linux-v{{ game_version }}.zip
     rm -rf {{ build_dir }}/linux
@@ -165,7 +168,7 @@ export-linux: bump-version install-addons import-resources
 # Export game for the web
 export-web: bump-version install-addons import-resources
     mkdir -p {{ build_dir }}/web
-    just godot --export-release "Web" --headless {{ build_dir }}/web/index.html
+    just godot --export-release "Web" {{ build_dir }}/web/index.html
 
 # Export on all platform
 export: export-windows export-mac export-linux
@@ -197,6 +200,24 @@ ci-load-dotenv:
     echo "godot_version={{ godot_version }}" >> $GITHUB_ENV
     echo "game_name={{ game_name }}" >> $GITHUB_ENV
     echo "game_version={{ game_version }}" >> $GITHUB_ENV
+
+# Starts godot using Xvfb and pulseaudio
+ci-godot-x11 *ARGS:
+    #!/bin/bash
+    set -e
+    # Set locale to 'en' if locale is not already set.
+    # Godot will fallback to this locale anyway and it
+    # prevents an error message being printed to console.
+    [ "$LANG" == "C.UTF-8" ] && LANG=en || true
+
+    # Start dummy sound device.
+    pulseaudio --check || pulseaudio -D
+
+    # Running godot with X11 Display.
+    xvfb-run --auto-servernum {{ godot_bin }} {{ ARGS }}
+
+    # Cleanup (allowed to fail).
+    pulseaudio -k || true
 
 # Download Butler
 [private]
