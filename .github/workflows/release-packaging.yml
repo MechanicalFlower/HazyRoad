@@ -44,6 +44,9 @@ jobs:
       - name: Load dotenv
         run: just ci-load-dotenv
 
+      - name: Setup Godot dependencies
+        uses: ./.github/actions/setup-godot
+
       - name: Export
         run: just export
 
@@ -67,6 +70,9 @@ jobs:
 
       - name: Load dotenv
         run: just ci-load-dotenv
+
+      - name: Setup Godot dependencies
+        uses: ./.github/actions/setup-godot
 
       - name: Export
         run: just export-web
