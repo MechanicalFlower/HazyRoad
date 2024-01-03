@@ -24,11 +24,6 @@ Copyright: 2023-present Hugo Locurcio and contributors
 License: MIT
 Source: https://github.com/godot-extended-libraries/godot-debug-menu
 
-Files: addons/gpsx/*
-Copyright: 2021 Uneven Prankster
-License: MIT
-Source: https://github.com/GithubPrankster/gpsx
-
 Files: addons/goat/*
 Copyright: 2019-2020 Miskatonic Studio
 License: MIT
@@ -156,8 +151,12 @@ Copyright: 2010 qubodup
 License: CC0-1.0
 Source: https://opengameart.org/content/door-open-door-close-set
 
-
 # Shaders
+
+Files: shaders/panoramic_textured_sky_with_clouds.gdshader
+Copyright: 2023 Gyrth
+License: CC0-1.0
+Source: https://godotshaders.com/shader/panoramic-textured-sky-with-clouds/
 
 Files: shaders/psx_model.gdshader
 Copyright: 2023 Grau
