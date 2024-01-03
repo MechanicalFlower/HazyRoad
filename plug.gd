@@ -11,12 +11,6 @@ func _plugging():
 			"include": ["addons/goat/images"]
 		}
 	)
-	plug("GithubPrankster/gpsx", {
-			"commit": "64b1c5f83daa4df3c714a65a8fd2f1294575dce3",
-			"install_root": "addons/gpsx",
-			"include": ["example/materials/shaders"]
-		}
-	)
 	plug("samclee/EZ-Sfx-and-Music", {"commit": "ac2b77c0336ff6edf6b26aa9342628d2ad63f359"})
 	plug("HolonProduction/godot_kanban_tasks", {
 		"commit": "cfc914caa1dabd085024ff196bcb8578eaee1e67",
