@@ -19,7 +19,7 @@ func _plugging():
 	)
 	plug("samclee/EZ-Sfx-and-Music", {"commit": "ac2b77c0336ff6edf6b26aa9342628d2ad63f359"})
 	plug("HolonProduction/godot_kanban_tasks", {
-		"commit": "cfc914caa1dabd085024ff196bcb8578eaee1e67",
+		"commit": "ab3b86ab60a807e0969d4afb5973c12cea180730",
 		"include": ["addons/kanban_tasks"]
 	})
 
