@@ -123,7 +123,7 @@ interact={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/i18n/locale.fr.translation")
+locale/translations=PackedStringArray("res://assets/i18n/locale.fr.translation", "res://assets/i18n/locale.en.translation")
 
 [layer_names]
 
