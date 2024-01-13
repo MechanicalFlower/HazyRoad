@@ -21,7 +21,8 @@
 			"uuid": "1362622c-1ff4-486f-8259-ad74fa64fa9d",
 			"title": "Todo",
 			"tasks": [
-				"9472b337-dcb7-4b3e-91f5-6fff4665e7fa"
+				"9472b337-dcb7-4b3e-91f5-6fff4665e7fa",
+				"d7871f7c-485d-4597-94d0-cfe97e67bd72"
 			]
 		},
 		{
@@ -201,6 +202,13 @@
 			"title": "Remove unused assets",
 			"description": "",
 			"category": "33d2a8e1-cea6-4280-b71a-a2aa44f6472a",
+			"steps": []
+		},
+		{
+			"uuid": "d7871f7c-485d-4597-94d0-cfe97e67bd72",
+			"title": "Add sounds for dialogue",
+			"description": "",
+			"category": "98e1b7c7-58dd-46db-b5c2-0c8b29108c79",
 			"steps": []
 		}
 	],

@@ -1,21 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://csi0appw0lt1t"]
+[gd_scene load_steps=9 format=3 uid="uid://csi0appw0lt1t"]
 
 [ext_resource type="Material" uid="uid://b37vueiav2gg8" path="res://assets/models/unfinished_buildings/unfinished_atlas.material" id="1_6j67m"]
+[ext_resource type="Texture2D" uid="uid://c6my81aan3jxb" path="res://assets/models/unfinished_buildings/unfinished_atlas.png" id="2_c1fwb"]
+[ext_resource type="Texture2D" uid="uid://mcprxpflavgh" path="res://assets/textures/red_bricks.jpg" id="3_q6fvl"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_h42gh"]
-resource_name = "Test_Cube004"
-_surfaces = [{
-"aabb": AABB(-0.5, 0, -0.5, 1, 3, 1.00001),
-"attribute_data": PackedByteArray(0, 32, 85, 62, 0, 0, 128, 63, 0, 32, 85, 62, 0, 0, 0, 63, 0, 32, 85, 62, 0, 0, 0, 63, 0, 32, 85, 62, 0, 0, 128, 63, 0, 64, 21, 62, 0, 0, 128, 63, 0, 64, 21, 62, 0, 0, 128, 63, 0, 64, 21, 62, 0, 0, 0, 63, 0, 64, 21, 62, 0, 0, 0, 63, 0, 64, 21, 62, 0, 0, 0, 63, 0, 64, 21, 62, 0, 0, 128, 63, 0, 64, 21, 62, 0, 0, 128, 63, 0, 64, 21, 62, 0, 0, 0, 63, 0, 32, 85, 62, 0, 0, 128, 63, 0, 32, 85, 62, 0, 0, 128, 63, 0, 32, 85, 62, 0, 0, 0, 63, 0, 32, 85, 62, 0, 0, 0, 63),
-"format": 34359742487,
-"index_count": 24,
-"index_data": PackedByteArray(0, 0, 6, 0, 2, 0, 0, 0, 4, 0, 6, 0, 5, 0, 14, 0, 7, 0, 5, 0, 12, 0, 14, 0, 13, 0, 11, 0, 15, 0, 13, 0, 9, 0, 11, 0, 8, 0, 3, 0, 10, 0, 8, 0, 1, 0, 3, 0),
-"material": ExtResource("1_6j67m"),
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 16,
-"vertex_data": PackedByteArray(0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 64, 64, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 64, 64, 0, 0, 0, 63, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 64, 64, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 64, 64, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 64, 64, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 64, 64, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 64, 64, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 64, 64, 0, 0, 0, 191, 1, 128, 0, 0, 255, 127, 126, 191, 0, 0, 0, 0, 0, 0, 126, 191, 1, 128, 0, 0, 255, 127, 126, 191, 0, 0, 0, 0, 0, 0, 126, 191, 1, 128, 0, 0, 255, 127, 126, 191, 255, 127, 255, 127, 255, 255, 128, 64, 1, 128, 0, 0, 255, 127, 126, 191, 255, 127, 255, 127, 255, 255, 128, 64, 0, 0, 0, 0, 0, 0, 126, 191, 255, 127, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 126, 191, 255, 127, 0, 0, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 128, 64, 255, 127, 0, 0, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 128, 64, 255, 127, 0, 0, 255, 255, 255, 255)
-}]
+[sub_resource type="BoxShape3D" id="BoxShape3D_mpfkj"]
+size = Vector3(1, 3, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hsacj"]
 resource_name = "unfinishedbuildings_Plane_055"
@@ -35,20 +25,28 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mpfkj"]
-size = Vector3(1, 3, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fcu7l"]
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_c1fwb")
 
-[node name="Cube003" type="MeshInstance3D"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19, 0, -10)
-mesh = SubResource("ArrayMesh_h42gh")
+[sub_resource type="BoxMesh" id="BoxMesh_devsw"]
 
-[node name="RebarPost_3" type="MeshInstance3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.8312, 0)
-mesh = SubResource("ArrayMesh_hsacj")
-skeleton = NodePath("")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_34dxq"]
+albedo_texture = ExtResource("3_q6fvl")
+uv1_scale = Vector3(1, 3, 1)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Column" type="StaticBody3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("BoxShape3D_mpfkj")
+
+[node name="RebarPost" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2, 0)
+mesh = SubResource("ArrayMesh_hsacj")
+surface_material_override/0 = SubResource("StandardMaterial3D_fcu7l")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("BoxMesh_devsw")
+surface_material_override/0 = SubResource("StandardMaterial3D_34dxq")

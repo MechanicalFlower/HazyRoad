@@ -2,6 +2,8 @@ repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.4.0
   hooks:
+  - id: check-added-large-files # Prevent giant files from being committed
+    args: ['--maxkb=1500']
   - id: fix-byte-order-marker   # Prevents weird UTF-8 encoding edge cases
   - id: check-case-conflict     # Check if case-insensitive filesystems would bork
   - id: check-docstring-first   # Check for if docstring was misplaced

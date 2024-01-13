@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fd3f20d00522d06b056d1d404a67b76506879a7dcec63898080b87c3b2527021
-size 54385287
+[gd_scene load_steps=2 format=3 uid="uid://bpkf65udulp0c"]
+
+[ext_resource type="PackedScene" uid="uid://w0vuxesw2eg4" path="res://assets/models/lamp_post_bench_trashcan/control_box.gltf" id="1_6goij"]
+
+[node name="ControlBox" type="Node3D"]
+
+[node name="ControlBox_1" parent="." instance=ExtResource("1_6goij")]
