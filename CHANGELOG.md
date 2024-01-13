@@ -5,6 +5,7 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Added
 ### Changed
 - Optimize images via ImgBot [#1](https://github.com/MechanicalFlower/HazyRoad/pull/1)
+- Update sky shader to add clouds [#4](https://github.com/MechanicalFlower/HazyRoad/pull/4)
 ### Deprecated
 ### Removed
 ### Fixed
