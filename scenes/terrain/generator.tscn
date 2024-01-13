@@ -180,64 +180,49 @@ transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 23, 0,
 [node name="Columns" type="Node3D" parent="."]
 
 [node name="Cube003" parent="Columns" instance=ExtResource("6_uu1ga")]
-skeleton = NodePath("../..")
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19, 0, -10)
 
 [node name="Cube005" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13, 0, -10)
-skeleton = NodePath("../..")
 
 [node name="Cube006" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13, 0, -16)
-skeleton = NodePath("../..")
 
 [node name="Cube007" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23, 0, -16)
-skeleton = NodePath("../..")
 
 [node name="Cube008" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 23, 0, 14)
-skeleton = NodePath("../..")
 
 [node name="Cube009" parent="Columns" instance=ExtResource("6_uu1ga")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, 7.5)
-skeleton = NodePath("../..")
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, 8.5)
 
 [node name="Cube010" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, 2.5)
-skeleton = NodePath("../..")
 
 [node name="Cube011" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 0, 2.5)
-skeleton = NodePath("../..")
 
 [node name="Cube015" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 0, -9.5)
-skeleton = NodePath("../..")
 
 [node name="Cube016" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 0, -3.5)
-skeleton = NodePath("../..")
 
 [node name="Cube017" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, -3.5)
-skeleton = NodePath("../..")
 
 [node name="Cube018" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 13, 0, -9.5)
-skeleton = NodePath("../..")
 
 [node name="Cube012" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 0, 8.5)
-skeleton = NodePath("../..")
 
 [node name="Cube013" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13, 0, 8)
-skeleton = NodePath("../..")
 
 [node name="Cube014" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -13, 0, 14)
-skeleton = NodePath("../..")
 
 [node name="Cube004" parent="Columns" instance=ExtResource("6_uu1ga")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19, 0, 8)
-skeleton = NodePath("../..")
