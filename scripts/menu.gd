@@ -12,7 +12,7 @@ func _ready():
 	title.set_text(&"Hazy Road")
 	easy_menu.connect(&"start_game_pressed", _on_Menu_start_game_pressed)
 	music.play("main_menu")
-	
+
 	await Fade.fade_in(1, Color.BLACK, "Diamond", false, false).finished
 
 

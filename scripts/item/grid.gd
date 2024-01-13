@@ -39,7 +39,7 @@ func toggle(receptacle_state: bool):
 		_activated_num_fuse += 1
 	else:
 		_activated_num_fuse -= 1
-	
+
 	var old_state := _state
 	_state = _is_active()
 
