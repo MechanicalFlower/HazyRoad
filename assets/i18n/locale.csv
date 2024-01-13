@@ -1,12 +1,12 @@
-keys,fr
-BARRIER,La [sparkle c1=red c2=dark_red]barrière[/sparkle] bloque le passage. Il faut que je trouve un moyen de la soulever.
-CAR_FLAT,"Merde, la [sparkle c1=green c2=lime]voiture[/sparkle] a un [sparkle c1=green c2=lime]pneu[/sparkle] crevé!"
-CAR,Je ne vais pas pouvoir avancer avec la [sparkle c1=red c2=dark_red]barrière[/sparkle] qui bloque le passage.
-DARK_ROAD,Il fait beaucoup trop [sparkle c1=red c2=dark_red]sombre[/sparkle] pour que je m'aventure dans ce chemin.
-DIRECTION_PANEL,Il semble y avoir une [sparkle c1=yellow c2=gold]cabane[/sparkle] et un [sparkle c1=yellow c2=gold]générateur[/sparkle] pas loin. Il faut que j'explore un peu pour voir ce que je peux y trouver.
-DOOR_HOUSE,Fermé! Il faut que je trouve quelque chose pour l'ouvrir.
-DOOR_SECURITY_POST,Fermé! Il faut que je trouve un moyen de l'ouvrir.
-FUSE_BOX,Quelque chose semble pouvoir s'insérer dedans.
-GRID,C'est très lourd. Il doit y avoir un moyen de les faire bouger.
-LIMIT,Il faut que je parte avec ma [sparkle c1=green c2=lime]voiture[/sparkle].
-WINDOW_HOUSE,Il semble y avoir des [sparkle c1=green c2=lime]pneus[/sparkle] dans cette [sparkle c1=yellow c2=gold]cabane[/sparkle].
+keys,fr,en
+BARRIER,La [sparkle c1=red c2=dark_red]barrière[/sparkle] bloque le passage. Il faut que je trouve un moyen de la soulever.,The [sparkle c1=red c2=dark_red]barrier[/sparkle] is blocking the way. I have to find a way to lift it.
+CAR_FLAT,"Merde, la [sparkle c1=green c2=lime]voiture[/sparkle] a un [sparkle c1=green c2=lime]pneu[/sparkle] crevé!","Shit, the [sparkle c1=green c2=lime]car[/sparkle] has a [sparkle c1=green c2=lime]flat tire[/sparkle]!"
+CAR,Je ne vais pas pouvoir avancer avec la [sparkle c1=red c2=dark_red]barrière[/sparkle] qui bloque le passage.,I won't be able to move forward with the [sparkle c1=red c2=dark_red]barrier[/sparkle] blocking the way.
+DARK_ROAD,Il fait beaucoup trop [sparkle c1=red c2=dark_red]sombre[/sparkle] pour que je m'aventure dans ce chemin.,It's far too [sparkle c1=red c2=dark_red]dark[/sparkle] for me to venture down this path.
+DIRECTION_PANEL,Il semble y avoir une [sparkle c1=yellow c2=gold]cabane[/sparkle] et un [sparkle c1=yellow c2=gold]générateur[/sparkle] pas loin. Il faut que j'explore un peu pour voir ce que je peux y trouver.,There seems to be a [sparkle c1=yellow c2=gold]cabin[/sparkle] and a [sparkle c1=yellow c2=gold]generator[/sparkle] nearby. I'll have to explore a bit to see what I can find.
+DOOR_HOUSE,Fermé! Il faut que je trouve quelque chose pour l'ouvrir.,Closed! I have to find something to open it.
+DOOR_SECURITY_POST,Fermé! Il faut que je trouve un moyen de l'ouvrir.,Closed! I have to find a way to open it.
+FUSE_BOX,Quelque chose semble pouvoir s'insérer dedans.,Something seems to fit inside.
+GRID,C'est très lourd. Il doit y avoir un moyen de les faire bouger.,They're very heavy. There must be some way to move them.
+LIMIT,Il faut que je parte avec ma [sparkle c1=green c2=lime]voiture[/sparkle].,I have to take my [sparkle c1=green c2=lime]car[/sparkle] with me.
+WINDOW_HOUSE,Il semble y avoir des [sparkle c1=green c2=lime]pneus[/sparkle] dans cette [sparkle c1=yellow c2=gold]cabane[/sparkle].,There seem to be [sparkle c1=green c2=lime]tires[/sparkle] in this [sparkle c1=yellow c2=gold]cabin[/sparkle].
