@@ -121,7 +121,7 @@ install-butler: makedirs
 # Download Butler if not already done
 [private]
 @check-butler:
-    [ ! -e {{ butler_bin }} ] && just butler || true
+    [ ! -e {{ butler_bin }} ] && just install-butler || true
 
 # === Python ===
 #
