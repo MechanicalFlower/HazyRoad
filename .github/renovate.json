@@ -28,7 +28,7 @@
       "depNameTemplate": "godotengine/godot",
       "packageNameTemplate": "https://github.com/godotengine/godot",
       "versioningTemplate": "loose",
-      "extractVersionTemplate": "^(?<version>.*)-stable$",
+      "extractVersionTemplate": "^(?<version>.*)$",
       "datasourceTemplate": "git-tags"
     }
   ]
