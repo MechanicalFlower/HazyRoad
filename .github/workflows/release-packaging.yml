@@ -14,9 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
-
       - uses: extractions/setup-just@v1
 
       - name: Load dotenv
@@ -37,9 +34,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
-
       - uses: extractions/setup-just@v1
 
       - name: Load dotenv
@@ -72,9 +66,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
-
       - uses: extractions/setup-just@v1
 
       - name: Cache Godot
@@ -112,9 +103,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
-
       - uses: extractions/setup-just@v1
 
       - name: Load dotenv

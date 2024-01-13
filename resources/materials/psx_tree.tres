@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c78d6c6a8a1bfb996a5b37077d1f8c68e8b413e378f081b92ac04c3da9537ac0
-size 55911600
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bbfbifstmtxwl"]
+
+[ext_resource type="Shader" path="res://shaders/psx_model.gdshader" id="1_e2pe1"]
+[ext_resource type="Texture2D" uid="uid://dsu04ntogxnh4" path="res://assets/models/tree/tree.png" id="2_t6ccv"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_e2pe1")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.5
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo = ExtResource("2_t6ccv")

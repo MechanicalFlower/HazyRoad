@@ -16,6 +16,7 @@ universal_fade/patterns_directory="res://addons/UniversalFade/Patterns"
 
 config/name="Hazy Road"
 config/description="You're on your way home and come to a crossroads where a barrier is blocking your way. You decide to get out of your car to find a way through."
+config/version="1.0.0"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2")
 
@@ -37,7 +38,7 @@ window/size/viewport_height=720
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/scenetomeshconverter/plugin.cfg")
 
 [filesystem]
 
