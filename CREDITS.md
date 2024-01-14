@@ -37,3 +37,4 @@
 - "[shaders/panoramic_textured_sky_with_clouds.gdshader](https://godotshaders.com/shader/panoramic-textured-sky-with-clouds/)" by **Gyrth** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[shaders/psx_model.gdshader](https://godotshaders.com/shader/ps1-psx-model/)" by **Grau** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[shaders/psx_postprocessing.gdshader](https://godotshaders.com/shader/ps1-psx-postprocessing/)" by **Grau** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
+- "[shaders/vignette.gdshader](https://godotshaders.com/shader/vignette)" by **crocoby** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)

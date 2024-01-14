@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bdupkh0grwy27"]
+[gd_scene load_steps=13 format=3 uid="uid://bdupkh0grwy27"]
 
 [ext_resource type="PackedScene" uid="uid://lqyku5wn2wo0" path="res://scenes/player/movement_controller.tscn" id="1_t1jcr"]
 [ext_resource type="PackedScene" uid="uid://b8drbos167vf8" path="res://scenes/player/head.tscn" id="2_41iu1"]
@@ -10,8 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://b580a8bk8iux5" path="res://scenes/item/accessory/mesh/fuse.tscn" id="7_hm5m3"]
 [ext_resource type="PackedScene" uid="uid://c2vreol3ncw80" path="res://scenes/item/accessory/mesh/tire.tscn" id="8_exj74"]
 [ext_resource type="Script" path="res://scripts/player/footsteep.gd" id="10_jo4mt"]
+[ext_resource type="Shader" path="res://shaders/vignette.gdshader" id="11_rslcb"]
 
-[node name="Player" instance=ExtResource("1_t1jcr")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4tm5b"]
+shader = ExtResource("11_rslcb")
+shader_parameter/alpha = 0.0
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 1.0
+
+[node name="Player" groups=["player"] instance=ExtResource("1_t1jcr")]
 collision_mask = 7
 
 [node name="Head" parent="." index="1" instance=ExtResource("2_41iu1")]
@@ -66,3 +73,15 @@ script = ExtResource("10_jo4mt")
 feet_path = NodePath("../Head/Foot")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FootstepComponent" index="0"]
+
+[node name="Vignette" type="Node" parent="." index="4"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Vignette" index="0"]
+
+[node name="ColorRect" type="ColorRect" parent="Vignette/CanvasLayer" index="0"]
+material = SubResource("ShaderMaterial_4tm5b")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
