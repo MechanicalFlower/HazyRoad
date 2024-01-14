@@ -4,4 +4,4 @@
 
 [node name="ControlBox" type="Node3D"]
 
-[node name="ControlBox_1" parent="." instance=ExtResource("1_6goij")]
+[node name="ControlBoxMesh" parent="." instance=ExtResource("1_6goij")]

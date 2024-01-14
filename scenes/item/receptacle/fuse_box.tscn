@@ -16,7 +16,7 @@ translation_keys = Array[String](["FUSE_BOX"])
 identifier = "fuse_box"
 icon = ExtResource("2_dkrrj")
 
-[node name="ControlBox_1" parent="." instance=ExtResource("3_bhemg")]
+[node name="ControlBox" parent="." instance=ExtResource("3_bhemg")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.1, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

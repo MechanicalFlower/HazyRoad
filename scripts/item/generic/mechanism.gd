@@ -11,10 +11,9 @@ func _ready():
 	super._ready()
 
 	if receptacle.is_empty():
-		printerr(self, " 'receptacle' must be set")
-
+		Log.warn("%s 'receptacle' must be set" % str(self))
 	if not has_method("toggle"):
-		printerr(self, " 'toggle' not implemented")
+		Log.warn("%s 'toggle' not implemented" % str(self))
 
 	GlobalSignal.add_listener(signal_name, _on_Receptacle_state_updated)
 
