@@ -13,17 +13,23 @@ A short puzzle game with a dark atmosphere, made with [Godot Engine](https://god
 
 </div>
 
-## About
+# About
 
-You're on your way home and come to a crossroads where a barrier is blocking your way. You decide to get out of your car to find a way through.
+Ever had one of those days where even getting home feels like a puzzle? Well, that's exactly what happens in __Hazy Road__. You're cruising home, and bam! A barrier shows up out of nowhere, blocking your way. So, you do what any sane person would do – step out of your car and figure out how to get the heck out of this crossroads mess.
 
-### Controls
+Explore and interact with object to figure out how to unblock your way at the crossroads.
 
-- `WASD` to move.
-- `Mouse` to move the camera around.
-- `Shift` to sprint.
-- `Space` to jump.
-- `ESC` to open and close settings menu.
+## Controls
+
+Keep it simple and straight:
+
+- <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>: Move around, just like in real life.
+- <kbd>Mouse</kbd>: Look around, because that's what you'd do.
+- <kbd>Shift</kbd>: Speed things up with a good old sprint.
+- <kbd>Space</kbd>: Jump – because life's full of unexpected obstacles.
+- <kbd>ESC</kbd>: Press this when you need a breather, to fiddle with settings or take a break.
+
+It's not the fanciest game, but hey, neither is life. So, go on, tackle that crossroads puzzle, and let's see if you've got what it takes to outsmart a stubborn barrier. Good luck!
 
 ### Screenshots
 
