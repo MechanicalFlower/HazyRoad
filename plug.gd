@@ -8,7 +8,7 @@ func _plugging():
 	)
 	plug("night-glider/Dialogue-Label", {"commit": "a211f35e4e4c255de1b640af14430ff675e31e5c"})
 	plug("KoBeWi/Godot-Universal-Fade", {"commit": "f091514bba652880f81c5bc8809e0ee4498988ea"})
-	plug("HungryProton/scatter", {"commit": "9cbdd801f4ef6c77140e84ed9b0d96df2c6c5bb1"})
+	plug("HungryProton/scatter", {"commit": "6821b63a120f4c003da7e4d6f9ec28658e8337dc"})
 	plug(
 		"miskatonicstudio/goat",
 		{"commit": "b10f26a07b4ffb283a53632f31d529f38c688082", "include": ["addons/goat/images"]}
