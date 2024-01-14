@@ -181,6 +181,9 @@ butler *ARGS: check-butler
     sed -i "s,application/product_version=.*$,application/product_version=\"{{ game_version }}.{{ datetime }}\",g" ./export_presets.cfg
     sed -i "s,application/version=.*$,application/version=\"{{ game_version }}\",g" ./export_presets.cfg
     sed -i "s,application/short_version=.*$,application/short_version=\"{{ short_version }}\",g" ./export_presets.cfg
+    
+    echo "Update version in the project.godot"
+    sed -i "s,config/version=.*$,config/version=\"{{ game_version }}\",g" ./project.godot
 
     echo "Create the override.cfg"
     touch override.cfg
