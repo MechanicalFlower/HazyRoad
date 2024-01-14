@@ -15,7 +15,7 @@ func toggle(receptacle_state: bool):
 		_activated_num_fuse -= 1
 
 	if _is_active():
-		print_debug("Open the Barrier")
+		Log.debug("Open the Barrier")
 		collision_shape.set_disabled(true)
 		barrier1.hide()
 		barrier1.set_process_mode(PROCESS_MODE_DISABLED)
@@ -24,7 +24,7 @@ func toggle(receptacle_state: bool):
 		_is_interactable = false
 
 	else:
-		print_debug("Close the Barrier")
+		Log.debug("Close the Barrier")
 		collision_shape.set_disabled(false)
 		barrier1.show()
 		barrier1.set_process_mode(PROCESS_MODE_INHERIT)

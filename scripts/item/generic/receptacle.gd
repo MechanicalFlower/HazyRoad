@@ -19,9 +19,9 @@ func _ready():
 	super._ready()
 
 	if item_to_interact.is_empty():
-		printerr(self, " 'item_to_interact' must be set")
+		Log.warn("%s 'item_to_interact' must be set" % str(self))
 	if translation_keys.is_empty():
-		printerr(self, " 'translation_keys' must be set")
+		Log.warn("%s 'translation_keys' must be set" % str(self))
 
 	call_deferred("add_child", dialogue)
 

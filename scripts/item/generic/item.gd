@@ -11,11 +11,11 @@ var _is_interactable: bool = true
 
 func _ready():
 	if identifier.is_empty():
-		printerr(self, " 'identifier' must be set")
+		Log.warn("%s 'identifier' must be set" % str(self))
 	if not is_instance_valid(icon):
-		printerr(self, " 'icon' must be set")
+		Log.warn("%s 'icon' must be set" % str(self))
 	if not has_method("interact"):
-		printerr(self, " 'interact' not implemented")
+		Log.warn("%s 'interact' not implemented" % str(self))
 
 
 func _process(_delta):

@@ -6,7 +6,9 @@ enum ScopedColor { YELLOW, BLUE, RED, GREEN }
 @export var color: ScopedColor
 
 @onready var sfx := get_node(^"PickupSFX")
-@onready var mesh: MeshInstance3D = get_node(^"ControlBox/ControlBoxMesh/ControlBox_1/ControlBoxCircuit_1/ControlBoxSwitch_1")
+@onready var mesh: MeshInstance3D = get_node(
+	^"ControlBox/ControlBoxMesh/ControlBox_1/ControlBoxCircuit_1/ControlBoxSwitch_1"
+)
 @onready var fuse_box: Node3D = get_node(^"FuseMesh")
 
 

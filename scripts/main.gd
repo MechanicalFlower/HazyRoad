@@ -3,6 +3,13 @@ extends Node3D
 @export var fast_close := true
 
 
+func _init():
+	if OS.is_debug_build():
+		Log.current_log_level = Log.LogLevel.DEBUG
+	else:
+		Log.current_log_level = Log.LogLevel.ERROR
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_viewport().scaling_3d_scale = 0.25
@@ -12,8 +19,8 @@ func _ready() -> void:
 		fast_close = false
 
 	if fast_close:
-		print_debug("** Fast Close enabled in the 'main.gd' script **")
-		print_debug("** 'Esc' to close 'Shift + F1' to release mouse **")
+		Log.debug("** Fast Close enabled in the 'main.gd' script **")
+		Log.debug("** 'Esc' to close 'Shift + F1' to release mouse **")
 
 	set_process_input(fast_close)
 

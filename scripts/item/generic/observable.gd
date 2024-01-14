@@ -9,13 +9,13 @@ const DialogueScene: PackedScene = preload("res://scenes/dialogue.tscn")
 
 
 func _ready():
-	icon = load("res://addons/goat/images/eye_icon.png")
+	icon = preload("res://addons/goat/images/eye_icon.png")
 
 	# gdlint:ignore = private-method-call
 	super._ready()
 
 	if translation_keys.is_empty():
-		printerr(self, " 'translation_keys' must be set")
+		Log.warn("%s 'translation_keys' must be set" % str(self))
 
 	call_deferred("add_child", dialogue)
 

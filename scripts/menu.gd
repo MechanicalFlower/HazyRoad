@@ -5,6 +5,13 @@ extends Node
 @onready var music: MusicPlayer = get_node(^"%MusicPlayer")
 
 
+func _init():
+	if OS.is_debug_build():
+		Log.current_log_level = Log.LogLevel.DEBUG
+	else:
+		Log.current_log_level = Log.LogLevel.ERROR
+
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 

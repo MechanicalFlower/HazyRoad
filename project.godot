@@ -30,6 +30,7 @@ DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 GlobalSignal="*res://scripts/framework/global_signal.gd"
 GameState="*res://scripts/framework/game_state.gd"
 MenuTemplateManager="*res://addons/EasyMenus/Nodes/menu_template_manager.tscn"
+Log="*res://addons/logger/logger.gd"
 
 [display]
 
@@ -38,7 +39,7 @@ window/size/viewport_height=720
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/logger/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
 
 [filesystem]
 

@@ -18,6 +18,7 @@ func _plugging():
 		"HolonProduction/godot_kanban_tasks",
 		{"commit": "cfc914caa1dabd085024ff196bcb8578eaee1e67", "include": ["addons/kanban_tasks"]}
 	)
+	plug("albinaask/Log", {"commit": "5cee3afca74e0abd9907202a58123263048415ce"})
 
 	# Patched version
 	plug("florianvazelle/EasyMenus", {"commit": "4d960ef6ab9f51a206e2eb40c2cc0b8f8eced71a"})
