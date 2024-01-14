@@ -11,12 +11,15 @@ config_version=5
 [addons]
 
 universal_fade/patterns_directory="res://addons/UniversalFade/Patterns"
+logger/log_message_format="{hour}:{minute}:{second} [{level}] {log_name} : {message}"
+logger/use_utc_time_format=true
+logger/break_on_error=false
 
 [application]
 
 config/name="Hazy Road"
 config/description="You're on your way home and come to a crossroads where a barrier is blocking your way. You decide to get out of your car to find a way through."
-config/version="1.0.0"
+config/version="1.0.1"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2")
 
