@@ -171,3 +171,8 @@ Files: shaders/psx_postprocessing.gdshader
 Copyright: 2023 Grau
 License: CC0-1.0
 Source: https://godotshaders.com/shader/ps1-psx-postprocessing/
+
+Files: shaders/vignette.gdshader
+Copyright: 2023 crocoby
+License: CC0-1.0
+Source: https://godotshaders.com/shader/vignette/

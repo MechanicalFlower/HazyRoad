@@ -11,6 +11,8 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Dependencies
 
 ## [1.0.2]
+### Added
+- Add black vignette when approaching the dark road [#15](https://github.com/MechanicalFlower/HazyRoad/pull/15)
 ### Fixed
 - Correctly define path to control box switch mesh [#14](https://github.com/MechanicalFlower/HazyRoad/pull/14)
 
