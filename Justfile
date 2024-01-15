@@ -57,7 +57,6 @@ game_itchio_key := env_var_or_default('GAME_ITCHIO_KEY', "")
 # Build info
 datetime := `date '+%Y%m%d'`
 short_version := replace_regex(game_version, "([0-9]+).([0-9]+).[0-9]+", "$1.$2")
-build_date := `date +'%Y/%m/%d'`
 commit_hash := `git log --pretty=format:"%H" -1`
 
 # Python virtualenv
@@ -188,10 +187,6 @@ butler *ARGS: check-butler
     echo "Update version in the project.godot"
     sed -i "s,config/version=.*$,config/version=\"{{ game_version }}\",g" ./project.godot
 
-    echo "Create the override.cfg"
-    touch override.cfg
-    echo -e '[build_info]\npackage/version="{{ game_version }}"\npackage/build_date="{{ build_date }}"\nsource/commit="{{ commit_hash }}"' > override.cfg
-
 [private]
 pre-export: clean-addons makedirs bump-version install-addons import-resources
 
@@ -231,7 +226,7 @@ export: export-windows export-mac export-linux
 # Remove game plugins
 clean-addons:
     rm -rf .plugged
-    [ -f plug.gd ] && find addons/ -type d -not -name 'addons' -not -name 'gd-plug' -exec rm -rf {} \; || true
+    [ -f plug.gd ] && (cd addons/ && git clean -X -d) || true
 
 # Remove files created by Godot
 clean-resources:

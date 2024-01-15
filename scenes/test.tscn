@@ -27,29 +27,7 @@
 [ext_resource type="Script" path="res://addons/proton_scatter/src/shapes/box_shape.gd" id="13_xp0pf"]
 [ext_resource type="PackedScene" uid="uid://dsybu3fdgdwy2" path="res://scenes/street_light.tscn" id="14_q4q2k"]
 [ext_resource type="PackedScene" uid="uid://bdhbrxiu8lpx1" path="res://scenes/item/receptacle/door_house.tscn" id="14_s25uy"]
-[ext_resource type="Shader" path="res://addons/gpsx/example/materials/shaders/misc/gpsx_sky.gdshader" id="14_uxwmh"]
 [ext_resource type="PackedScene" uid="uid://cxdasewpcpnsb" path="res://scenes/item/receptacle/fuse_box.tscn" id="15_f7r8g"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_74i28"]
-shader = ExtResource("14_uxwmh")
-shader_parameter/mixer = Color(0.290196, 0.282353, 1, 1)
-shader_parameter/tex = ExtResource("6_e3amk")
-shader_parameter/dithering = true
-shader_parameter/banding = true
-
-[sub_resource type="Sky" id="Sky_xvdyl"]
-sky_material = SubResource("ShaderMaterial_74i28")
-
-[sub_resource type="Environment" id="Environment_7ofk6"]
-background_mode = 2
-sky = SubResource("Sky_xvdyl")
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.9
-tonemap_mode = 2
-glow_enabled = true
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0
-volumetric_fog_sky_affect = 0.3
 
 [sub_resource type="BoxMesh" id="BoxMesh_egctf"]
 size = Vector3(8, 4, 4)
@@ -166,9 +144,6 @@ script = ExtResource("1_kqnqy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.395, 0)
 
 [node name="Lighting" type="Node" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
-environment = SubResource("Environment_7ofk6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
 transform = Transform3D(-0.572263, 0.516061, -0.637335, -0.151768, 0.697101, 0.700726, 0.805904, 0.497727, -0.320604, 0, 16.7255, 0)
