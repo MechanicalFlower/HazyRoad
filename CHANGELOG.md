@@ -9,6 +9,7 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Fixed
 ### Security
 ### Dependencies
+- Bump `actions/cache` from 3 to 4 ([#22](https://github.com/MechanicalFlower/HazyRoad/pull/22))
 
 ## [1.0.2]
 ### Added
