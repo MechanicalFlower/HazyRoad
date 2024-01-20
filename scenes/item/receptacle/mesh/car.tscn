@@ -4,5 +4,5 @@
 [ext_resource type="Material" uid="uid://cisfqkqr8poc2" path="res://resources/materials/psx_car.tres" id="1_x7out"]
 
 [node name="CarMesh" type="MeshInstance3D"]
-material_override = ExtResource("1_x7out")
 mesh = ExtResource("1_fy14n")
+surface_material_override/0 = ExtResource("1_x7out")

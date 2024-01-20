@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bbfbifstmtxwl"]
 
 [ext_resource type="Shader" path="res://shaders/psx_model.gdshader" id="1_e2pe1"]
-[ext_resource type="Texture2D" uid="uid://dsu04ntogxnh4" path="res://assets/models/tree/tree.png" id="2_t6ccv"]
+[ext_resource type="Texture2D" uid="uid://dsu04ntogxnh4" path="res://assets/models/tree/tree.png" id="2_e7ncu"]
 
 [resource]
 render_priority = 0
@@ -10,4 +10,4 @@ shader_parameter/affine_mapping = false
 shader_parameter/alpha_scissor = 0.5
 shader_parameter/jitter = 0.5
 shader_parameter/resolution = Vector2i(320, 240)
-shader_parameter/albedo = ExtResource("2_t6ccv")
+shader_parameter/albedo = ExtResource("2_e7ncu")

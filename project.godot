@@ -40,9 +40,13 @@ Log="*res://addons/logger/logger.gd"
 window/size/viewport_width=960
 window/size/viewport_height=720
 
+[editor]
+
+export/convert_text_resources_to_binary=false
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/export-build-info/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/logger/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/export-build-info/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/logger/plugin.cfg")
 
 [filesystem]
 
@@ -137,5 +141,15 @@ locale/translations=PackedStringArray("res://assets/i18n/locale.fr.translation",
 
 [rendering]
 
+occlusion_culling/bvh_build_quality=0
+driver/threads/thread_model=0
+global_illumination/gi/use_half_resolution=true
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+environment/ssao/quality=0
+environment/ssil/quality=0
 anti_aliasing/screen_space_roughness_limiter/enabled=false
+environment/glow/upscale_mode=0
+environment/screen_space_reflection/roughness_quality=0
+environment/subsurface_scattering/subsurface_scattering_quality=0
+environment/volumetric_fog/use_filter=0
 occlusion_culling/use_occlusion_culling=true
