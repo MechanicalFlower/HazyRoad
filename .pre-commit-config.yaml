@@ -32,8 +32,8 @@ repos:
     exclude: '^addons/gd-plug/'
 - repo: local
   hooks:
-  - id: lower-case-only
-    name: lower case only
+  - id: check-filenames-are-lowercase
+    name: check that filenames are lowercase
     entry: filenames must be lower-case or lower_case only
     language: fail
     files: '[^a-z0-9._/-]'
@@ -41,7 +41,7 @@ repos:
       (?x)^(
           .godot/|
           .reuse/|
-          addons/|
+          addons/gd-plug/|
           CHANGELOG.md|
           CONTRIBUTING.md|
           CREDITS.md|
@@ -51,8 +51,8 @@ repos:
           public/|
           README.md
       )
-  - id: check-shaders
-    name: check shaders
+  - id: format-shaders
+    name: format shaders
     entry: clang-format
     args:
       - --style=llvm
@@ -60,4 +60,4 @@ repos:
       - -i
     language: system
     files: \.gdshader$
-    exclude: ^addons/
+    exclude: ^addons/gd-plug/

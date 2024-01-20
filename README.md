@@ -13,13 +13,13 @@ A short puzzle game with a dark atmosphere, made with [Godot Engine](https://god
 
 </div>
 
-# About
+## About
 
 Ever had one of those days where even getting home feels like a puzzle? Well, that's exactly what happens in __Hazy Road__. You're cruising home, and bam! A barrier shows up out of nowhere, blocking your way. So, you do what any sane person would do – step out of your car and figure out how to get the heck out of this crossroads mess.
 
 Explore and interact with object to figure out how to unblock your way at the crossroads.
 
-## Controls
+### Controls
 
 Keep it simple and straight:
 
