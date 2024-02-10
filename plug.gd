@@ -7,10 +7,6 @@ func _plugging():
 		{"commit": "9d36ea23661d095198ff7fcfff2715172f73c983", "renovate-branch": "master"}
 	)
 	plug(
-		"night-glider/Dialogue-Label",
-		{"commit": "a211f35e4e4c255de1b640af14430ff675e31e5c", "renovate-branch": "main"}
-	)
-	plug(
 		"KoBeWi/Godot-Universal-Fade",
 		{"commit": "f091514bba652880f81c5bc8809e0ee4498988ea", "renovate-branch": "master"}
 	)
@@ -38,7 +34,7 @@ func _plugging():
 	# Patched version
 	plug(
 		"florianvazelle/EasyMenus",
-		{"commit": "4d960ef6ab9f51a206e2eb40c2cc0b8f8eced71a", "renovate-branch": "master"}
+		{"commit": "018ab39001f862abbd6ca424258a9a548589d61c", "renovate-branch": "master"}
 	)
 	plug(
 		"florianvazelle/scatter",
@@ -47,4 +43,8 @@ func _plugging():
 	plug(
 		"florianvazelle/Log",
 		{"commit": "51878aa55c4169f19b2c000f0e53b77439654829", "renovate-branch": "main"}
+	)
+	plug(
+		"florianvazelle/Dialogue-Label",
+		{"commit": "1f394f219f8abe417588964b424767f4ab42c525", "renovate-branch": "main"}
 	)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://sccd1vwp2ki2"]
+
+[ext_resource type="PackedScene" uid="uid://b43uay10ffraw" path="res://scenes/ui/bootsplash.tscn" id="1_245pj"]
+[ext_resource type="PackedScene" uid="uid://b3c40w65832qf" path="res://scenes/ui/godot_logo.tscn" id="2_5gb7y"]
+[ext_resource type="PackedScene" uid="uid://cu23j06f2lav6" path="res://scenes/ui/lsdjam_bootstrap.tscn" id="3_exmtp"]
+
+[node name="GodotBootstrap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BootsplashScene" parent="." instance=ExtResource("1_245pj")]
+layout_mode = 1
+node = ExtResource("2_5gb7y")
+next_scene = ExtResource("3_exmtp")

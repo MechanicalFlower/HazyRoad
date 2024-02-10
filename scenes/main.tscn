@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bqp0n1riykqno"]
+[gd_scene load_steps=14 format=3 uid="uid://bqp0n1riykqno"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_t4ric"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://scenes/player/player.tscn" id="2_qs36v"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bi488ty0ccvig" path="res://scenes/item/receptacle/car.tscn" id="5_ll4xb"]
 [ext_resource type="Script" path="res://scripts/scenario.gd" id="7_7br1o"]
 [ext_resource type="PackedScene" uid="uid://dh8yln8lji7v2" path="res://addons/UniversalFade/Fade.tscn" id="8_5t6vp"]
+[ext_resource type="PackedScene" uid="uid://rw7gdui8lu3n" path="res://addons/EasyMenus/Scenes/pause_menu.tscn" id="8_u5nlo"]
 
 [sub_resource type="Animation" id="Animation_8utog"]
 length = 0.001
@@ -130,6 +131,24 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1.395, 11)
 
 [node name="Fade" parent="." instance=ExtResource("8_5t6vp")]
+layer = 1
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="PauseMenu" parent="UI" instance=ExtResource("8_u5nlo")]
+visible = false
+
+[node name="Content" parent="UI/PauseMenu" index="1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -175.0
+offset_top = 67.0
+offset_right = 190.0
+offset_bottom = 385.0
+grow_vertical = 1
 
 [node name="Occluders" type="Node3D" parent="."]
 
@@ -140,3 +159,5 @@ occluder = SubResource("QuadOccluder3D_5kp36")
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders"]
 transform = Transform3D(0.629537, 0, 0.77697, 0, 1, 0, -0.77697, 0, 0.629537, 21.582, 5.3279, -45.8096)
 occluder = SubResource("QuadOccluder3D_5kp36")
+
+[editable path="UI/PauseMenu"]
