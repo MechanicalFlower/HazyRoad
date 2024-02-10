@@ -19,7 +19,7 @@
 [ext_resource type="Script" path="res://addons/proton_scatter/src/cache/scatter_cache.gd" id="18_2gyad"]
 [ext_resource type="PackedScene" uid="uid://dq6tvhqcy2aps" path="res://addons/EasyMenus/Scenes/main_menu.tscn" id="18_qnpgs"]
 
-[sub_resource type="Resource" id="Resource_8cemp"]
+[sub_resource type="Resource" id="Resource_l4cum"]
 script = ExtResource("10_i08vh")
 spacing = 7.0
 offset = 0.0
@@ -31,7 +31,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_15dop"]
+[sub_resource type="Resource" id="Resource_3jn67"]
 script = ExtResource("11_mxkfj")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(5, 360, 5)
@@ -42,7 +42,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_un21h"]
+[sub_resource type="Resource" id="Resource_c0tnh"]
 script = ExtResource("13_rxk03")
 ray_direction = Vector3(0, -1, 0)
 ray_length = 10.0
@@ -58,15 +58,15 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_diktx"]
+[sub_resource type="Resource" id="Resource_8i654"]
 script = ExtResource("9_tjaot")
-stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_8cemp"), SubResource("Resource_15dop"), SubResource("Resource_un21h")])
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_l4cum"), SubResource("Resource_3jn67"), SubResource("Resource_c0tnh")])
 
 [sub_resource type="Resource" id="Resource_d0x1d"]
 script = ExtResource("16_1c47g")
 radius = 95.0
 
-[sub_resource type="Resource" id="Resource_tttis"]
+[sub_resource type="Resource" id="Resource_iip65"]
 script = ExtResource("10_i08vh")
 spacing = 7.0
 offset = 0.0
@@ -78,7 +78,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_15g1c"]
+[sub_resource type="Resource" id="Resource_gvyxk"]
 script = ExtResource("11_mxkfj")
 position = Vector3(0.15, 0.15, 0.15)
 rotation = Vector3(5, 360, 5)
@@ -89,7 +89,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 2
 
-[sub_resource type="Resource" id="Resource_n66dv"]
+[sub_resource type="Resource" id="Resource_i5umb"]
 script = ExtResource("13_rxk03")
 ray_direction = Vector3(0, -1, 0)
 ray_length = 10.0
@@ -105,15 +105,15 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_dyfhg"]
+[sub_resource type="Resource" id="Resource_vd8vn"]
 script = ExtResource("9_tjaot")
-stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_tttis"), SubResource("Resource_15g1c"), SubResource("Resource_n66dv")])
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_iip65"), SubResource("Resource_gvyxk"), SubResource("Resource_i5umb")])
 
 [sub_resource type="Resource" id="Resource_cc1hy"]
 script = ExtResource("16_1c47g")
 radius = 75.0
 
-[sub_resource type="Resource" id="Resource_puh6s"]
+[sub_resource type="Resource" id="Resource_mmks6"]
 script = ExtResource("10_i08vh")
 spacing = 30.0
 offset = 0.0
@@ -125,7 +125,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_2bmp6"]
+[sub_resource type="Resource" id="Resource_dsggk"]
 script = ExtResource("13_rxk03")
 ray_direction = Vector3(0, -1, 0)
 ray_length = 10.0
@@ -141,7 +141,7 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_nfyol"]
+[sub_resource type="Resource" id="Resource_6iwb4"]
 script = ExtResource("17_o176y")
 target = Vector3(0, 0, 0)
 up = Vector3(0, 1, 0)
@@ -151,9 +151,9 @@ custom_seed = 0
 restrict_height = false
 reference_frame = 0
 
-[sub_resource type="Resource" id="Resource_nymur"]
+[sub_resource type="Resource" id="Resource_fvkdf"]
 script = ExtResource("9_tjaot")
-stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_puh6s"), SubResource("Resource_2bmp6"), SubResource("Resource_nfyol")])
+stack = Array[Resource("res://addons/proton_scatter/src/modifiers/base_modifier.gd")]([SubResource("Resource_mmks6"), SubResource("Resource_dsggk"), SubResource("Resource_6iwb4")])
 
 [sub_resource type="Resource" id="Resource_ibgxc"]
 script = ExtResource("16_1c47g")
@@ -182,7 +182,7 @@ speed = 0.1
 
 [node name="Car" parent="." instance=ExtResource("4_qdrib")]
 unique_name_in_owner = true
-transform = Transform3D(0.500549, 0, 0.865707, 0, 1, 0, -0.865707, 0, 0.500549, -38.8158, 0.25, 75.6197)
+transform = Transform3D(0.280073, 0, 0.959978, 0, 1, 0, -0.959978, 0, 0.280073, -19.6983, 0.25, 82.686)
 script = null
 
 [node name="Camera3D" type="Camera3D" parent="Car"]
@@ -199,7 +199,7 @@ transform = Transform3D(7, 0, 0, 0, 1, 0, 0, 0, 7, 0, 0, 0)
 [node name="Forest" type="Node3D" parent="Forest"]
 script = ExtResource("8_k1uyb")
 force_rebuild_on_load = false
-modifier_stack = SubResource("Resource_diktx")
+modifier_stack = SubResource("Resource_8i654")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 
@@ -219,7 +219,7 @@ shape = SubResource("Resource_d0x1d")
 [node name="Forest2" type="Node3D" parent="Forest"]
 script = ExtResource("8_k1uyb")
 force_rebuild_on_load = false
-modifier_stack = SubResource("Resource_dyfhg")
+modifier_stack = SubResource("Resource_vd8vn")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 
@@ -240,7 +240,7 @@ shape = SubResource("Resource_cc1hy")
 script = ExtResource("8_k1uyb")
 render_mode = 1
 force_rebuild_on_load = false
-modifier_stack = SubResource("Resource_nymur")
+modifier_stack = SubResource("Resource_fvkdf")
 Performance/use_chunks = true
 Performance/chunk_dimensions = Vector3(15, 15, 15)
 
@@ -269,6 +269,7 @@ unique_name_in_owner = true
 [node name="Label" type="Label" parent="HUD/EasyMenu/Content" index="5"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.717647, 0.717647, 0.717647, 1)
+text = "v1.0.2 @ a9602d1"
 horizontal_alignment = 1
 script = ExtResource("17_8hvvs")
 
