@@ -11,6 +11,7 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Security
 ### Dependencies
 - Bump `actions/cache` from 3 to 4 ([#22](https://github.com/MechanicalFlower/HazyRoad/pull/22))
+- Bump `extractions/setup-just` from 1 to 2 ([#27](https://github.com/MechanicalFlower/HazyRoad/pull/27))
 
 ## [1.0.3]
 ### Added
