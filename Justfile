@@ -196,6 +196,10 @@ butler *ARGS: check-butler
     echo "Update version in the project.godot"
     sed -i "s,config/version=.*$,config/version=\"{{ game_version }}\",g" ./project.godot
 
+@quiver $QUIVER_AUTH_TOKEN:
+    echo "Add Quiver authentication token in the project.godot"
+    sed -i "s,REPLACE_ME,"$QUIVER_AUTH_TOKEN",g" ./project.godot
+
 [private]
 pre-export: clean-addons makedirs bump-version install-addons import-resources
 

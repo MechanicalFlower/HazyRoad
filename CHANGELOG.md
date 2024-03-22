@@ -4,6 +4,7 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ## [Unreleased]
 ### Added
 - Add custom bootsplash ([#25](https://github.com/MechanicalFlower/HazyRoad/pull/25))
+- Add Quiver Analtics ([#28](https://github.com/MechanicalFlower/HazyRoad/pull/28))
 ### Changed
 ### Deprecated
 ### Removed

@@ -30,6 +30,13 @@ func _plugging():
 			"include": ["addons/kanban_tasks"]
 		}
 	)
+	plug(
+		"quiver-dev/quiver-analytics-godot-plugin",
+		{
+			"commit": "7430a4533911701845c3f1f59945543d63962263",
+			"renovate-branch": "main",
+		}
+	)
 
 	# Patched version
 	plug(

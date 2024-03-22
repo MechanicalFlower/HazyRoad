@@ -22,6 +22,13 @@ func _on_Accessory_current_item_updated(new_current_item: StringName):
 			fuse.show()
 		&"tire":
 			tire.show()
+	await Analytics.add_event(
+		"current_item_updated",
+		{
+			"game_version": ProjectSettings.get("application/config/version"),
+			"item_name": new_current_item
+		}
+	)
 
 
 func hide_all():
