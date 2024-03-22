@@ -5,7 +5,7 @@ on:
   # Ensure the build works on main
   push:
     branches: [main]
-    tags:
+    tags: ['*']
   # Ensure the build works on each pull request
   pull_request:
 
@@ -43,6 +43,9 @@ jobs:
 
       - name: Load dotenv
         run: just ci-load-dotenv
+
+      - name: Setup Quiver
+        run: just quiver ${{ secrets.QUIVER_AUTH_TOKEN }}
 
       - name: Cache Godot
         uses: actions/cache@v4
@@ -113,6 +116,9 @@ jobs:
       - name: Load dotenv
         run: just ci-load-dotenv
 
+      - name: Setup Quiver
+        run: just quiver ${{ secrets.QUIVER_AUTH_TOKEN }}
+
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v3
         with:
@@ -125,4 +131,4 @@ jobs:
         run: just ci-publish
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}

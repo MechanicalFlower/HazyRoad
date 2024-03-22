@@ -22,6 +22,9 @@ func _ready():
 
 func _on_Scenario_animation_finished(anim_name: StringName):
 	if anim_name == &"intro":
+		await Analytics.add_event(
+			"Start the game", {"game_version": ProjectSettings.get("application/config/version")}
+		)
 		camera_car.get_parent().get_node("Engine").stop()
 
 		# Transition that launch the playable game
@@ -29,6 +32,9 @@ func _on_Scenario_animation_finished(anim_name: StringName):
 		player.set_process_mode(PROCESS_MODE_INHERIT)
 
 	elif anim_name == &"outro":
+		await Analytics.add_event(
+			"Finish the game", {"game_version": ProjectSettings.get("application/config/version")}
+		)
 		await Fade.fade_out(1, Color.BLACK, "Diamond", false, false).finished
 		get_tree().change_scene_to_file("res://scenes/menu.tscn")
 

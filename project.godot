@@ -36,11 +36,12 @@ GlobalSignal="*res://scripts/framework/global_signal.gd"
 GameState="*res://scripts/framework/game_state.gd"
 MenuTemplateManager="*res://addons/EasyMenus/Nodes/menu_template_manager.tscn"
 Log="*res://addons/logger/logger.gd"
+Analytics="*res://addons/quiver_analytics/analytics.tscn"
 
 [custom_options]
 
-build_info/commit="a9602d15680d01d0406f54ed85a3d02b4ab69d4f"
-build_info/date="2024/02/10"
+build_info/commit="a340227663d7250445ca4ac8b0f59f41b64e9a03"
+build_info/date="2024/03/22"
 
 [display]
 
@@ -53,7 +54,7 @@ export/convert_text_resources_to_binary=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/export-build-info/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/logger/plugin.cfg", "res://addons/proton_scatter/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/export-build-info/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/logger/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/quiver_analytics/plugin.cfg")
 
 [filesystem]
 
@@ -145,6 +146,10 @@ locale/translations=PackedStringArray("res://assets/i18n/locale.fr.translation",
 3d_physics/layer_1="Objects"
 3d_physics/layer_2="Player"
 3d_physics/layer_3="Floor"
+
+[quiver]
+
+general/auth_token="REPLACE_ME"
 
 [rendering]
 
