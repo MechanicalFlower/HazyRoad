@@ -3,6 +3,15 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+### Dependencies
+
+## [1.0.4]
+### Added
 - Add custom bootsplash ([#25](https://github.com/MechanicalFlower/HazyRoad/pull/25))
 - Add Quiver Analtics ([#28](https://github.com/MechanicalFlower/HazyRoad/pull/28))
 ### Changed
@@ -42,7 +51,8 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Fixed
 - Include `.godot` folder to fix the CI build step ([#2](https://github.com/MechanicalFlower/HazyRoad/pull/2))
 
-[Unreleased]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.3...HEAD
+[Unreleased]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.4...HEAD
+[1.0.4]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.3...1.0.4
 [1.0.3]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.0...1.0.1

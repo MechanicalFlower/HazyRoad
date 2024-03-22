@@ -8,6 +8,7 @@
 - "[addons/dialogue_label/*](https://github.com/night-glider/Dialogue-Label)" by **night-glider** licensed under [MIT](./LICENSES/MIT.txt)
 - "[addons/UniversalFade/*](https://github.com/KoBeWi/Godot-Universal-Fade)" by **Tomek** licensed under [MIT](./LICENSES/MIT.txt)
 - "[addons/EasyMenus/*](https://github.com/SavoVuksan/EasyMenus)" by **Savo Vuksan** licensed under [MIT](./LICENSES/MIT.txt)
+- "[addons/quiver_analytics/*](https://github.com/quiver-dev/quiver-analytics-godot-plugin/)" by **Quiver** licensed under [MIT](./LICENSES/MIT.txt)
 ## Models
 - "[assets/models/car/*](https://ggbot.itch.io/psx-style-cars)" by **GGBotNet** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[assets/models/crowbar/*](https://opengameart.org/content/crowbar)" by **Clint Bellanger** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
@@ -37,4 +38,4 @@
 - "[shaders/panoramic_textured_sky_with_clouds.gdshader](https://godotshaders.com/shader/panoramic-textured-sky-with-clouds/)" by **Gyrth** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[shaders/psx_model.gdshader](https://godotshaders.com/shader/ps1-psx-model/)" by **Grau** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[shaders/psx_postprocessing.gdshader](https://godotshaders.com/shader/ps1-psx-postprocessing/)" by **Grau** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
-- "[shaders/vignette.gdshader](https://godotshaders.com/shader/vignette)" by **crocoby** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
+- "[shaders/vignette.gdshader](https://godotshaders.com/shader/vignette/)" by **crocoby** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)

@@ -19,7 +19,7 @@ logger/break_on_error=false
 
 config/name="Hazy Road"
 config/description="You're on your way home and come to a crossroads where a barrier is blocking your way. You decide to get out of your car to find a way through."
-config/version="1.0.2"
+config/version="1.0.4"
 run/main_scene="res://scenes/ui/godot_bootstrap.tscn"
 config/features=PackedStringArray("4.2")
 boot_splash/bg_color=Color(0, 0, 0, 1)
