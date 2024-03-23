@@ -17,6 +17,7 @@ data_*/
 addons/*
 !addons/gd-plug/
 !addons/export-build-info/
+!addons/gh-release-checker/
 
 # Python-specific ignores
 venv/

@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bel6wcaksdcjk"]
+[gd_scene load_steps=35 format=3 uid="uid://bel6wcaksdcjk"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_qiuru"]
 [ext_resource type="Environment" uid="uid://dtgnbg8pmfbjy" path="res://resources/fog_env.tres" id="2_nkke1"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://addons/proton_scatter/src/modifiers/look_at.gd" id="17_o176y"]
 [ext_resource type="PackedScene" uid="uid://b65hjj0ndnrnb" path="res://addons/ez-sfx-and-music/scenes/MusicPlayer/music_player.tscn" id="17_tb5q3"]
 [ext_resource type="Script" path="res://addons/proton_scatter/src/cache/scatter_cache.gd" id="18_2gyad"]
+[ext_resource type="Script" path="res://addons/gh-release-checker/checker.gd" id="18_g6nxs"]
 [ext_resource type="PackedScene" uid="uid://dq6tvhqcy2aps" path="res://addons/EasyMenus/Scenes/main_menu.tscn" id="18_qnpgs"]
 
 [sub_resource type="Resource" id="Resource_l4cum"]
@@ -272,6 +273,21 @@ theme_override_colors/font_color = Color(0.717647, 0.717647, 0.717647, 1)
 text = "v1.0.2 @ a9602d1"
 horizontal_alignment = 1
 script = ExtResource("17_8hvvs")
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD/EasyMenu/Content" index="6"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="HUD/EasyMenu/Content/CenterContainer"]
+layout_mode = 2
+script = ExtResource("18_g6nxs")
+
+[node name="LinkBtn" type="LinkButton" parent="HUD/EasyMenu/Content/CenterContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MusicPlayer" parent="." instance=ExtResource("17_tb5q3")]
 unique_name_in_owner = true
