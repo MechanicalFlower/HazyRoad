@@ -4,6 +4,7 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ## [Unreleased]
 ### Added
 ### Changed
+- Use the SFX bus for foot step sounds ([#30](https://github.com/MechanicalFlower/HazyRoad/pull/30))
 ### Deprecated
 ### Removed
 ### Fixed
