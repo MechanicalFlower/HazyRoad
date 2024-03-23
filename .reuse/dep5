@@ -44,6 +44,11 @@ Copyright: 2022 Savo Vuksan
 License: MIT
 Source: https://github.com/SavoVuksan/EasyMenus
 
+Files: addons/quiver_analytics/*
+Copyright: 2023 Quiver
+License: MIT
+Source: https://github.com/quiver-dev/quiver-analytics-godot-plugin/
+
 # Models
 
 Files: assets/models/car/*
