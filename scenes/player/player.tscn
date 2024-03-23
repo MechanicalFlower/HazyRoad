@@ -73,6 +73,7 @@ script = ExtResource("10_jo4mt")
 feet_path = NodePath("../Head/Foot")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="FootstepComponent" index="0"]
+bus = &"SFX"
 
 [node name="Vignette" type="Node" parent="." index="4"]
 
