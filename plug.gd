@@ -33,7 +33,7 @@ func _plugging():
 	plug(
 		"quiver-dev/quiver-analytics-godot-plugin",
 		{
-			"commit": "7430a4533911701845c3f1f59945543d63962263",
+			"commit": "a19568f29853efee39338d63712a7da44342b359",
 			"renovate-branch": "main",
 		}
 	)
