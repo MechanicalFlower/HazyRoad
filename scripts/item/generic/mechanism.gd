@@ -11,9 +11,9 @@ func _ready():
 	super._ready()
 
 	if receptacle.is_empty():
-		Log.warn("%s 'receptacle' must be set" % str(self))
+		push_warning("[Mechanism] %s 'receptacle' must be set" % str(self))
 	if not has_method("toggle"):
-		Log.warn("%s 'toggle' not implemented" % str(self))
+		push_warning("[Mechanism] %s 'toggle' not implemented" % str(self))
 
 	GlobalSignal.add_listener(signal_name, _on_Receptacle_state_updated)
 

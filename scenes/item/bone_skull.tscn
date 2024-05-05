@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://lmrdxp6y8hr2"]
+
+[ext_resource type="ArrayMesh" uid="uid://cxnf3vds7bgg3" path="res://assets/models/bone_skull/bone_skull.obj" id="1_eqle2"]
+[ext_resource type="Shader" path="res://shaders/psx_model.gdshader" id="2_m5v7i"]
+[ext_resource type="Texture2D" uid="uid://ccihbs5rmgkos" path="res://assets/models/bone_skull/bone_skull.png" id="3_g28hy"]
+[ext_resource type="Script" path="res://scripts/item/bone_skull.gd" id="4_6dh2m"]
+[ext_resource type="Texture2D" uid="uid://bhuy268abh5dy" path="res://assets/textures/sun.png" id="5_ro2i7"]
+[ext_resource type="AudioStream" uid="uid://bmf3m5mc4g67s" path="res://assets/sfx/pickup.wav" id="6_u4dvs"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vp7gd"]
+render_priority = 0
+shader = ExtResource("2_m5v7i")
+shader_parameter/affine_mapping = false
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.25
+shader_parameter/resolution = Vector2i(320, 240)
+shader_parameter/albedo = ExtResource("3_g28hy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n86qq"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="BoneSkull" type="Node3D"]
+
+[node name="PsxBoneSkull" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.276123, 0, -0.961458, 0, 1, 0, 0.961458, 0, -0.276123, 0, 0, 0)
+mesh = ExtResource("1_eqle2")
+surface_material_override/0 = SubResource("ShaderMaterial_vp7gd")
+script = ExtResource("4_6dh2m")
+
+[node name="Halo" type="Sprite3D" parent="."]
+transform = Transform3D(0.0426894, 0, -0.698739, 0, 0.7, 0, 0.698739, 0, 0.0426894, 0, 0, 0)
+modulate = Color(0.122252, 0.122252, 0.122252, 1)
+billboard = 2
+texture = ExtResource("5_ro2i7")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_n86qq")
+
+[node name="PickupSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_u4dvs")
+pitch_scale = 0.5
+bus = &"SFX"
+
+[connection signal="finished" from="PickupSFX" to="PsxBoneSkull" method="_on_pickup_sfx_finished"]

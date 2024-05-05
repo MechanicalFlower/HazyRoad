@@ -12,7 +12,7 @@ func add_listener(signal_name: StringName, callable: Callable):
 
 func trigger_signal(signal_name: StringName, arguments: Array = []):
 	if not _signals.has(signal_name):
-		Log.error("Unknown signal: '" + signal_name + "'")
+		printerr("[GlobalSIgnal] Unknown signal: '" + signal_name + "'")
 		return
 
 	for callable in _signals[signal_name]:

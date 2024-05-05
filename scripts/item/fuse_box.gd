@@ -10,6 +10,7 @@ enum ScopedColor { YELLOW, BLUE, RED, GREEN }
 	^"ControlBox/ControlBoxMesh/ControlBox_1/ControlBoxCircuit_1/ControlBoxSwitch_1"
 )
 @onready var fuse_box: Node3D = get_node(^"FuseMesh")
+@onready var light: OmniLight3D = get_node(^"OmniLight3D")
 
 
 func _ready():
@@ -18,22 +19,29 @@ func _ready():
 
 	var material = mesh.get_active_material(0)
 	material.set_emission_energy_multiplier(1)
+	light.light_energy = 0.1
+
 	if material is BaseMaterial3D:
 		match color:
 			ScopedColor.YELLOW:
 				material.set_emission(Color.YELLOW)
+				light.set_color(Color.YELLOW)
 				# Activate yellow FuseBox by default
 				_state = true
 				GlobalSignal.trigger_signal(signal_name, [_state])
 				fuse_box.set_visible(_state)
 
 				material.set_emission_energy_multiplier(16)
+				light.light_energy = 1.0
 			ScopedColor.RED:
 				material.set_emission(Color.RED)
+				light.set_color(Color.RED)
 			ScopedColor.BLUE:
 				material.set_emission(Color.BLUE)
+				light.set_color(Color.BLUE)
 			ScopedColor.GREEN:
 				material.set_emission(Color.GREEN)
+				light.set_color(Color.GREEN)
 	mesh.set_surface_override_material(0, material)
 
 
@@ -68,6 +76,7 @@ func interact():
 			var material = mesh.get_active_material(0)
 			material.set_emission_energy_multiplier(16)
 			mesh.set_surface_override_material(0, material)
+			light.light_energy = 1.0
 	else:
 		# Otherwise, if the fuse_box contains a fuse
 		if _state:
@@ -79,6 +88,7 @@ func interact():
 			var material = mesh.get_active_material(0)
 			material.set_emission_energy_multiplier(1)
 			mesh.set_surface_override_material(0, material)
+			light.light_energy = 0.1
 
 			fuse_box.set_visible(_state)
 			sfx.play()
