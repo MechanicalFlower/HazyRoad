@@ -13,10 +13,12 @@ func _ready():
 	animation_player.connect(&"animation_finished", _on_Scenario_animation_finished)
 	GlobalSignal.add_listener(&"game_finished", _on_Scenario_game_finished)
 
-	# Start the game with an intro cutscene
 	Fade.fade_in(1, Color.BLACK, "Diamond", false, false)
-	animation_player.play(&"intro")
 
+	GameState.playing_start_time = Time.get_unix_time_from_system()
+
+	# Start the game with an intro cutscene
+	animation_player.play(&"intro")
 	camera_car.get_parent().get_node("Engine").play()
 
 
@@ -32,17 +34,42 @@ func _on_Scenario_animation_finished(anim_name: StringName):
 		player.set_process_mode(PROCESS_MODE_INHERIT)
 
 	elif anim_name == &"outro":
-		await Analytics.add_event(
-			"Finish the game", {"game_version": ProjectSettings.get("application/config/version")}
+		var playing_time = snapped(
+			(GameState.playing_end_time - GameState.playing_start_time) / 60, 0.01
 		)
-		await Fade.fade_out(1, Color.BLACK, "Diamond", false, false).finished
-		get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+		var event = {
+			"game_version": ProjectSettings.get("application/config/version"),
+			"playing_time": playing_time,
+			"collectable_founded": GameState.collectable_founded,
+		}
+		await Analytics.add_event("Finish the game", event)
+
+		var outro_ui = $"../UI/Outro"
+		var scores = outro_ui.get_node("CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2")
+		scores.get_node("PlayingTimeScore").set_text("%fm" % playing_time)
+		scores.get_node("CollectableFoundedScore").set_text(
+			"%s / 5" % GameState.collectable_founded
+		)
+		outro_ui.show()
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed(&"ui_accept"):
+		var outro_ui = $"../UI/Outro"
+		if outro_ui.visible:
+			await Fade.fade_out(1, Color.BLACK, "Diamond", false, false).finished
+			get_tree().change_scene_to_file("res://scenes/menu.tscn")
 
 
 func _on_Scenario_game_finished():
+	player.get_node("Head/InteractRay/TextureRect").set_texture(null)
+
 	player.set_process_mode(PROCESS_MODE_DISABLED)
 	camera_car.set_current(true)
 
+	# End the game with an outro cutscene
 	animation_player.play(&"outro")
-
 	camera_car.get_parent().get_node("Engine").play()
+
+	GameState.playing_end_time = Time.get_unix_time_from_system()

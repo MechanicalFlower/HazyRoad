@@ -23,7 +23,6 @@ func toggle(receptacle_state: bool):
 		_activated_num_fuse -= 1
 
 	if _is_active():
-		Log.debug("Open the DoorSecurityPost")
 		tween.tween_property(self, "rotation_degrees:y", initial_rotation.y + 135, 1)
 		tween.set_trans(Tween.TRANS_SINE)
 		tween.play()
@@ -31,7 +30,6 @@ func toggle(receptacle_state: bool):
 		_is_interactable = false
 
 	elif _open:
-		Log.debug("Close the DoorSecurityPost")
 		tween.tween_property(self, "rotation_degrees:y", initial_rotation.y, 1)
 		tween.set_trans(Tween.TRANS_SINE)
 		tween.play()

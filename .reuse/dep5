@@ -91,6 +91,11 @@ Copyright: 2022 loafbrr
 License: CC0-1.0
 Source: https://opengameart.org/content/foliage1
 
+Files: assets/models/bone_skumm/*
+Copyright: 2023 StarStark Crafts
+License: CC0-1.0
+Source: https://www.patreon.com/posts/made-lil-gif-103261000
+
 # Textures
 
 Files: assets/textures/ground.jpg
@@ -171,11 +176,6 @@ Files: shaders/psx_model.gdshader
 Copyright: 2023 Grau
 License: CC0-1.0
 Source: https://godotshaders.com/shader/ps1-psx-model/
-
-Files: shaders/psx_postprocessing.gdshader
-Copyright: 2023 Grau
-License: CC0-1.0
-Source: https://godotshaders.com/shader/ps1-psx-postprocessing/
 
 Files: shaders/vignette.gdshader
 Copyright: 2023 crocoby

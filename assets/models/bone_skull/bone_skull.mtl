@@ -1,0 +1,12 @@
+# Blender 4.0.2 MTL File: 'Thumb_Lich.blend'
+# www.blender.org
+
+newmtl Head
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd bone_skull.png
+map_d bone_skull.png

@@ -1,13 +1,6 @@
 extends Node3D
 
 
-func _init():
-	if OS.is_debug_build():
-		Log.current_log_level = Log.LogLevel.DEBUG
-	else:
-		Log.current_log_level = Log.LogLevel.ERROR
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_viewport().scaling_3d_scale = 0.25
