@@ -8,3 +8,4 @@ script = ExtResource("1_enjfg")
 
 [node name="Camera" type="Camera3D" parent="."]
 current = true
+far = 300.0

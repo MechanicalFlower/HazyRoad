@@ -37,6 +37,10 @@ func _plugging():
 			"renovate-branch": "main",
 		}
 	)
+	plug(
+		"https://github.com/ItsKorin/Godot-Post-Process-Plugin",
+		{"commit": "20e94f35306879ee7943298fafcc2edbb3fd41c2", "renovate-branch": "main"}
+	)
 
 	# Patched version
 	plug(
@@ -46,10 +50,6 @@ func _plugging():
 	plug(
 		"florianvazelle/scatter",
 		{"commit": "02b71c2637687b00d4da4f0ff0f108f6700f1d93", "renovate-branch": "v4"}
-	)
-	plug(
-		"florianvazelle/Log",
-		{"commit": "51878aa55c4169f19b2c000f0e53b77439654829", "renovate-branch": "main"}
 	)
 	plug(
 		"florianvazelle/Dialogue-Label",
