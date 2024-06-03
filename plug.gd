@@ -13,7 +13,7 @@ func _plugging():
 	plug(
 		"miskatonicstudio/goat",
 		{
-			"commit": "b10f26a07b4ffb283a53632f31d529f38c688082",
+			"commit": "7ab7aca3db69199d64fe7f8a00db4fe43afcadab",
 			"renovate-branch": "master",
 			"include": ["addons/goat/images"]
 		}
