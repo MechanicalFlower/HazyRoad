@@ -9,6 +9,7 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Fixed
 ### Security
 ### Dependencies
+- Bump `dawidd6/action-download-artifact` from 3 to 4 ([#41](https://github.com/MechanicalFlower/HazyRoad/pull/41))
 
 ## [1.0.5]
 ### Added
