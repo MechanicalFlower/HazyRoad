@@ -25,7 +25,7 @@ func _plugging():
 	plug(
 		"HolonProduction/godot_kanban_tasks",
 		{
-			"commit": "cfc914caa1dabd085024ff196bcb8578eaee1e67",
+			"commit": "81321a2cc69943242ad6490a7a5767174e04f471",
 			"renovate-branch": "master",
 			"include": ["addons/kanban_tasks"]
 		}
