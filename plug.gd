@@ -53,5 +53,5 @@ func _plugging():
 	)
 	plug(
 		"florianvazelle/Dialogue-Label",
-		{"commit": "1f394f219f8abe417588964b424767f4ab42c525", "renovate-branch": "main"}
+		{"commit": "f47547f8c06f8ba635de8ada638cfc9e5493c963", "renovate-branch": "main"}
 	)
