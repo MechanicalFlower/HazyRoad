@@ -49,7 +49,7 @@ func _plugging():
 	)
 	plug(
 		"florianvazelle/Log",
-		{"commit": "51878aa55c4169f19b2c000f0e53b77439654829", "renovate-branch": "main"}
+		{"commit": "df4234270eb74eef3f9feadd8bd26e323800e3a6", "renovate-branch": "main"}
 	)
 	plug(
 		"florianvazelle/Dialogue-Label",
