@@ -72,11 +72,3 @@ shape = SubResource("BoxShape3D_d7vwl")
 transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, -8.74228e-09, 0, -0.557594, 0)
 mesh = SubResource("ArrayMesh_japsl")
 skeleton = NodePath("")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="StreetLightMesh"]
-transform = Transform3D(4.47401, 6.12929e-08, 2.23232, -2.23232, 8.57856e-08, 4.47401, 1.65449e-08, -5, 1.04126e-07, -3.78045, 43.2976, -2.84217e-14)
-light_color = Color(0.698039, 0.709804, 0.47451, 1)
-light_energy = 16.0
-light_volumetric_fog_energy = 3.0
-spot_range = 16.8672
-spot_angle = 34.3211
