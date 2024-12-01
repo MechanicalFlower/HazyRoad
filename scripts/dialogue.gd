@@ -13,7 +13,7 @@ func _ready():
 
 func _process(_delta):
 	if GameState.state == GameState.State.DIALOGUE:
-		if Input.is_action_just_pressed(&"ui_accept"):
+		if Input.is_action_just_pressed(&"ui_accept") or Input.is_action_just_pressed(&"interact"):
 			if dialogue_label.active:
 				dialogue_label.next_message()
 
@@ -34,7 +34,9 @@ func start_dialogue(translation_keys: Array[String]):
 		dialogue_label.messages.append(tr(key))
 
 	_old_game_state = GameState.state
-	GameState.state = GameState.State.DIALOGUE
+	dialogue_label.start_dialogue()
 	show()
 	set_process(true)
-	dialogue_label.start_dialogue()
+	await get_tree().process_frame
+	await get_tree().process_frame
+	GameState.state = GameState.State.DIALOGUE
