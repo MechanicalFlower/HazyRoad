@@ -223,6 +223,24 @@ offset_right = 190.0
 offset_bottom = 385.0
 grow_vertical = 1
 
+[node name="HSeparator2" parent="UI/PauseMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="3"]
+visible = false
+
+[node name="FullscreenCheckButton" parent="UI/PauseMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="4"]
+visible = false
+
+[node name="VSyncCheckButton" parent="UI/PauseMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="5"]
+visible = false
+
+[node name="MarginContainer2" parent="UI/PauseMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="6"]
+visible = false
+
+[node name="MarginContainer3" parent="UI/PauseMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="7"]
+visible = false
+
+[node name="HSeparator3" parent="UI/PauseMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="8"]
+visible = false
+
 [node name="Outro" parent="UI" instance=ExtResource("9_ckaoq")]
 
 [node name="Occluders" type="Node3D" parent="."]
@@ -236,3 +254,6 @@ transform = Transform3D(0.629537, 0, 0.77697, 0, 1, 0, -0.77697, 0, 0.629537, 21
 occluder = SubResource("QuadOccluder3D_5kp36")
 
 [editable path="UI/PauseMenu"]
+[editable path="UI/PauseMenu/OptionsMenu"]
+[editable path="UI/PauseMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/SFXVolumeSlider"]
+[editable path="UI/PauseMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/MusicVolumeSlider"]
