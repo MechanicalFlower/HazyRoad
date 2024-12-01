@@ -24,6 +24,8 @@ shape = SubResource("ConcavePolygonShape3D_sgmua")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.83927, 0.98072, 2.62728)
 light_color = Color(0.772549, 0.752941, 0.262745, 1)
 light_energy = 16.0
+light_indirect_energy = 16.0
+light_size = 1.0
 spot_range = 7.0
 spot_angle = 19.6195
 
@@ -31,6 +33,8 @@ spot_angle = 19.6195
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.892703, 0.98072, 2.62728)
 light_color = Color(0.772549, 0.752941, 0.262745, 1)
 light_energy = 16.0
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
 spot_range = 7.0
 spot_angle = 19.6195
 
