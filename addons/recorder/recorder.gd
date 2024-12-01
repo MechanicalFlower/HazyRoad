@@ -28,7 +28,7 @@ func _ready() -> void:
 	set_process(false)
 	set_process_input(false)
 
-	if not Engine.is_editor_hint():
+	if not Engine.is_editor_hint() and OS.is_debug_build():
 		set_process(true)
 		set_process_input(true)
 
