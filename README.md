@@ -23,13 +23,12 @@ Explore and interact with object to figure out how to unblock your way at the cr
 
 Keep it simple and straight:
 
-- <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>: Move around, just like in real life.
-- <kbd>Mouse</kbd>: Look around, because that's what you'd do.
-- <kbd>Shift</kbd>: Speed things up with a good old sprint.
-- <kbd>Space</kbd>: Jump – because life's full of unexpected obstacles.
-- <kbd>ESC</kbd>: Press this when you need a breather, to fiddle with settings or take a break.
-
-It's not the fanciest game, but hey, neither is life. So, go on, tackle that crossroads puzzle, and let's see if you've got what it takes to outsmart a stubborn barrier. Good luck!
+- <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>: Movement
+- <kbd>Mouse</kbd>: Look
+- <kbd>Shift</kbd>: Sprint
+- <kbd>Space</kbd>: Jump
+- <kbd>E</kbd>/<kbd>Left Click</kbd>: Interact
+- <kbd>ESC</kbd>: Pause Menu
 
 ### Screenshots
 
@@ -38,6 +37,70 @@ It's not the fanciest game, but hey, neither is life. So, go on, tackle that cro
 <img src="public/publishing/screenshots/screenshot1.png" width="30%"> <img src="public/publishing/screenshots/screenshot2.png" width="30%"> <img src="public/publishing/screenshots/screenshot3.png" width="30%"> <img src="public/publishing/screenshots/screenshot4.png" width="30%">
 
 </div>
+
+## Installation
+
+### From a release
+
+Released binaries are available
+on the Github repository, in the release section.
+
+Download the zip archive, accordingly to your OS, and unzip it.
+
+- **Windows**: Double click on `HazyRoad.exe`.
+- **MacOS**: Double click on `HazyRoad.app`.
+- **Linux**: In a terminal, run `./HazyRoad.x86_64`.
+
+### From source
+
+> [!IMPORTANT]
+> For this installation, you need to have
+> the Godot Editor installed.
+
+Clone the source locally:
+```
+git clone https://github.com/MechanicalFlower/HazyRoad.git
+```
+
+You need to install addons first:
+```
+godot --headless --script plug.gd install
+```
+
+And simply run the game as any Godot project:
+```
+godot
+```
+
+## Development
+
+The project use:
+- [`just`](https://just.systems/man/en/) as command runner,
+- [`pre-commit`](https://pre-commit.com/) to run formatters, this requires [Python 3](https://docs.python.org/3/).
+
+> [!IMPORTANT]
+> Actually, `just` recipes only support Linux.
+
+To check all available recipes, run:
+```
+just
+```
+
+To run formatters:
+```
+just fmt
+```
+
+To install, and run the game:
+```
+just install-addons
+just godot
+```
+
+> [!TIP]
+> In `just` recipes, the Godot Editor is installed
+> automatically. This ensure that you
+> use the right version of the engine.
 
 ## Contributing
 

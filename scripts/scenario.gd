@@ -47,7 +47,9 @@ func _on_Scenario_animation_finished(anim_name: StringName):
 
 		var outro_ui = $"../UI/Outro"
 		var scores = outro_ui.get_node("CenterContainer/VBoxContainer/HBoxContainer/VBoxContainer2")
-		scores.get_node("PlayingTimeScore").set_text("%fm" % playing_time)
+		scores.get_node("PlayingTimeScore").set_text(
+			"%02d:%02d" % [playing_time / 60, fmod(playing_time, 60)]
+		)
 		scores.get_node("CollectableFoundedScore").set_text(
 			"%s / 5" % GameState.collectable_founded
 		)
