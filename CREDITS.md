@@ -18,6 +18,7 @@
 - "[assets/models/lamp_post_bench_trashcan/*](https://opengameart.org/content/lamp-post-bench-trashcan)" by **loafbrr** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[assets/models/unfinished_buildings/*](https://opengameart.org/content/unfinished-buildings)" by **loafbrr** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[assets/models/foliage/*](https://opengameart.org/content/foliage1)" by **loafbrr** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
+- "[assets/models/bone_skumm/*](https://www.patreon.com/posts/made-lil-gif-103261000)" by **StarStark Crafts** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 ## Textures
 - "[assets/textures/ground.jpg](https://ambientcg.com/view?id=Ground037)" by **Lennart Demes** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[assets/textures/paving_stones.jpg](https://ambientcg.com/view?id=PavingStones131)" by **Lennart Demes** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
@@ -37,5 +38,4 @@
 ## Shaders
 - "[shaders/panoramic_textured_sky_with_clouds.gdshader](https://godotshaders.com/shader/panoramic-textured-sky-with-clouds/)" by **Gyrth** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[shaders/psx_model.gdshader](https://godotshaders.com/shader/ps1-psx-model/)" by **Grau** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
-- "[shaders/psx_postprocessing.gdshader](https://godotshaders.com/shader/ps1-psx-postprocessing/)" by **Grau** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)
 - "[shaders/vignette.gdshader](https://godotshaders.com/shader/vignette/)" by **crocoby** licensed under [CC0-1.0](./LICENSES/CC0-1.0.txt)

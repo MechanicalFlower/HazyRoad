@@ -3,7 +3,11 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 ### Added
+- Add E as key to interact ([#39](https://github.com/MechanicalFlower/HazyRoad/pull/39))
 ### Changed
+- Hide rendering options ([#39](https://github.com/MechanicalFlower/HazyRoad/pull/39))
+- Open game in fullscreen by default ([#39](https://github.com/MechanicalFlower/HazyRoad/pull/39))
+- Use interact key to iterate on dialogue ([#39](https://github.com/MechanicalFlower/HazyRoad/pull/39))
 ### Deprecated
 ### Removed
 ### Fixed

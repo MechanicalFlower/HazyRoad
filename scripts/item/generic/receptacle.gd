@@ -19,9 +19,9 @@ func _ready():
 	super._ready()
 
 	if item_to_interact.is_empty():
-		Log.warn("%s 'item_to_interact' must be set" % str(self))
+		push_warning("[Receptacle] %s 'item_to_interact' must be set" % str(self))
 	if translation_keys.is_empty():
-		Log.warn("%s 'translation_keys' must be set" % str(self))
+		push_warning("[Receptacle] %s 'translation_keys' must be set" % str(self))
 
 	call_deferred("add_child", dialogue)
 

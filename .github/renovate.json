@@ -1,4 +1,5 @@
 {
+  "labels": ["skip-changelog"],
   "customManagers": [
     {
       "customType": "regex",

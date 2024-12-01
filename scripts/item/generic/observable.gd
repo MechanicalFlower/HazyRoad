@@ -15,7 +15,7 @@ func _ready():
 	super._ready()
 
 	if translation_keys.is_empty():
-		Log.warn("%s 'translation_keys' must be set" % str(self))
+		push_warning("[Observable] %s 'translation_keys' must be set" % str(self))
 
 	call_deferred("add_child", dialogue)
 

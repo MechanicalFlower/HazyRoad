@@ -19,6 +19,7 @@ func _physics_process(_delta):
 					detected.interact()
 					if detected is Accessory:
 						icon.set_texture(null)
+					get_viewport().set_input_as_handled()
 		else:
 			icon.set_texture(null)
 	else:

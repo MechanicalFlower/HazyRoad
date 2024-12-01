@@ -289,9 +289,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="HSeparator2" parent="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="3"]
+visible = false
+
+[node name="FullscreenCheckButton" parent="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="4"]
+visible = false
+
+[node name="VSyncCheckButton" parent="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="5"]
+visible = false
+
+[node name="MarginContainer2" parent="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="6"]
+visible = false
+
+[node name="MarginContainer3" parent="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="7"]
+visible = false
+
+[node name="HSeparator3" parent="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="8"]
+visible = false
+
+[node name="BackButton" parent="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer" index="9"]
+visible = false
+
 [node name="MusicPlayer" parent="." instance=ExtResource("17_tb5q3")]
 unique_name_in_owner = true
 music_folder = "res://assets/music"
 bus_name = "Music"
 
 [editable path="HUD/EasyMenu"]
+[editable path="HUD/EasyMenu/OptionsMenu"]
+[editable path="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/SFXVolumeSlider"]
+[editable path="HUD/EasyMenu/OptionsMenu/MarginContainer/ScrollContainer/VBoxContainer/MarginContainer/VBoxContainer/MusicVolumeSlider"]

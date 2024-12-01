@@ -18,6 +18,7 @@ addons/*
 !addons/gd-plug/
 !addons/export-build-info/
 !addons/gh-release-checker/
+!addons/recorder/
 
 # Python-specific ignores
 venv/

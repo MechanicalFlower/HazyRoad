@@ -28,3 +28,7 @@ visible = false
 [node name="PickupSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qeg80")
 bus = &"SFX"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.622242, 0, 0)
+omni_range = 1.75

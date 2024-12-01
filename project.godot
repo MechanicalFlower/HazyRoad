@@ -36,18 +36,19 @@ DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 GlobalSignal="*res://scripts/framework/global_signal.gd"
 GameState="*res://scripts/framework/game_state.gd"
 MenuTemplateManager="*res://addons/EasyMenus/Nodes/menu_template_manager.tscn"
-Log="*res://addons/logger/logger.gd"
 Analytics="*res://addons/quiver_analytics/analytics.tscn"
 
 [custom_options]
 
-build_info/commit="4604a5bbe345d12362074f3aa7806711aeb5bdef"
-build_info/date="2024/03/23"
+build_info/commit="5fc1890e30e9be01fe7e08cf657834806ec111cf"
+build_info/date="2024/05/05"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=720
+window/size/mode=3
+window/stretch/mode="canvas_items"
 
 [editor]
 
@@ -55,7 +56,7 @@ export/convert_text_resources_to_binary=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/export-build-info/plugin.cfg", "res://addons/gh-release-checker/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/logger/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/quiver_analytics/plugin.cfg")
+enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg", "res://addons/dialogue_label/plugin.cfg", "res://addons/export-build-info/plugin.cfg", "res://addons/gh-release-checker/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/post_processing/plugin.cfg", "res://addons/proton_scatter/plugin.cfg", "res://addons/quiver_analytics/plugin.cfg")
 
 [filesystem]
 
@@ -135,6 +136,7 @@ look_right={
 interact={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"echo":false,"script":null)
 ]
 }
 
