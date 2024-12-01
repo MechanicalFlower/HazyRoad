@@ -49,7 +49,7 @@ func _plugging():
 	)
 	plug(
 		"florianvazelle/scatter",
-		{"commit": "02b71c2637687b00d4da4f0ff0f108f6700f1d93", "renovate-branch": "v4"}
+		{"commit": "8e4738e36c10673ac83fa123eeef31d0d4176308", "renovate-branch": "v4"}
 	)
 	plug(
 		"florianvazelle/Dialogue-Label",
