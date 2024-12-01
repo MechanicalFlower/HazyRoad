@@ -138,7 +138,7 @@ export PIP_REQUIRE_VIRTUALENV := "true"
 
 # Run files formatters
 fmt:
-    just venv pip install pre-commit==3.*
+    just venv pip install pre-commit==4.*
     just venv pre-commit run -a
 
 # Generate the CREDTIS.md file
