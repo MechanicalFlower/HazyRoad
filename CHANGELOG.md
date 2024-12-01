@@ -3,6 +3,15 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 ## [Unreleased]
 ### Added
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+### Dependencies
+
+## [1.0.6]
+### Added
 - Add E as key to interact ([#39](https://github.com/MechanicalFlower/HazyRoad/pull/39))
 ### Changed
 - Hide rendering options ([#39](https://github.com/MechanicalFlower/HazyRoad/pull/39))
@@ -67,7 +76,8 @@ Inspired from [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Fixed
 - Include `.godot` folder to fix the CI build step ([#2](https://github.com/MechanicalFlower/HazyRoad/pull/2))
 
-[Unreleased]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.5...HEAD
+[Unreleased]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.6...HEAD
+[1.0.6]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.5...1.0.6
 [1.0.5]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.4...1.0.5
 [1.0.4]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.3...1.0.4
 [1.0.3]: https://github.com/MechanicalFlower/HazyRoad/compare/1.0.2...1.0.3
