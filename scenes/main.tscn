@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bqp0n1riykqno"]
+[gd_scene load_steps=19 format=3 uid="uid://bqp0n1riykqno"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_t4ric"]
 [ext_resource type="PackedScene" uid="uid://bdupkh0grwy27" path="res://scenes/player/player.tscn" id="2_qs36v"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dh8yln8lji7v2" path="res://addons/UniversalFade/Fade.tscn" id="8_5t6vp"]
 [ext_resource type="PackedScene" uid="uid://rw7gdui8lu3n" path="res://addons/EasyMenus/Scenes/pause_menu.tscn" id="8_u5nlo"]
 [ext_resource type="PackedScene" uid="uid://bmkxyh5cgcbc3" path="res://scenes/ui/outro.tscn" id="9_ckaoq"]
+[ext_resource type="PackedScene" uid="uid://6ittc0iyw8no" path="res://addons/recorder/recorder.tscn" id="13_kbtyc"]
 
 [sub_resource type="Resource" id="Resource_u5lkw"]
 script = ExtResource("4_sxi5l")
@@ -161,6 +162,8 @@ size = Vector2(50, 20)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_t4ric")
+
+[node name="Recorder" parent="." instance=ExtResource("13_kbtyc")]
 
 [node name="Lighting" type="Node" parent="."]
 

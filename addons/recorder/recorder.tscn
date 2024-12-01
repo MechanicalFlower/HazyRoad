@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://6ittc0iyw8no"]
+
+[ext_resource type="Script" path="res://addons/recorder/recorder.gd" id="1_dhngc"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_0t7oo"]
+device = -1
+keycode = 4194335
+
+[sub_resource type="Shortcut" id="Shortcut_piyhg"]
+events = [SubResource("InputEventKey_0t7oo")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_yisvm"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_wskbk"]
+events = [SubResource("InputEventKey_yisvm")]
+
+[node name="Recorder" type="Node"]
+script = ExtResource("1_dhngc")
+output_folder = "out"
+record_shortcut = SubResource("Shortcut_piyhg")
+save_shortcut = SubResource("Shortcut_wskbk")
