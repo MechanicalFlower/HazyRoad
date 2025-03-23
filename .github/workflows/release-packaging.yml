@@ -56,7 +56,11 @@ jobs:
           key: ${{ env.godot_version }}
 
       - name: Export
-        run: just export
+        run: |
+          just export 2> godot_export.log
+          cat godot_export.log
+          just venv pip install git+https://github.com/florianvazelle/godot-export-logs-validator.git@main
+          just venv godot-export-logs-validator godot_export.log -f
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
